@@ -5,8 +5,13 @@
 | --- | --- | --- | --- | --- |
 
 ### SIZE
-Small = 1,200 to 9,600 AI , For Hosted ARMA Servers
-Large = 24,00 to 19,200 AI , For A dedicated ARMA Server (a real server)
+smallw = Small War = 1,200 to 9,600 AI , For Hosted ARMA Servers (Blue 400 Units) (Red 800 Units)
+
+largew = Large War = 24,00 to 19,200 AI , For A dedicated ARMA Server (a real server) (Blue 800 Units) (Red 16,000 Units)
+
+smalli = Small Insurgent  = 1,200 to 9,600 AI , For Hosted ARMA Servers (Blue 200 Units) (green 400 Units) (insurgent recruit up to 800 units)
+
+largei = Large Insurgent  = 24,00 to 19,200 AI , For A dedicated ARMA Server (a real server) (Blue 200 Units) (green 600 Units) (insurgent recruit up to 1,200 units)
 
 ### PUB
 A mission with PUB is a vanilla mission
