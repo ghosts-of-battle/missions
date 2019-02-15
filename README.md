@@ -73,11 +73,17 @@ listing them all here is a work in progress
 - Transfer loadouts to other players and AI
 - Access Virtual Arsenal
 - Load class on respawn
-![loadout Organizer](https://community.bistudio.com/wiki/File:B_Slingload_01_Cargo_F.jpg)
+
+![loadout Organizer](https://community.bistudio.com/wikidata/images/thumb/b/b9/B_Slingload_01_Cargo_F.jpg/150px-B_Slingload_01_Cargo_F.jpg)
 
 ### Vehicle Spawner
 - View vehicle characteristics such as top speed, number of passenger seats, fuel consumption and more prior to spawning it.
+- Vehicle Spawner's are marked on the map,
+- Make sure you move the spawned vehicle, before spawning a new one.
+
 ![vehicle spawning](https://community.bistudio.com/wikidata/images/thumb/9/9a/B_Slingload_01_Repair_F.jpg/150px-B_Slingload_01_Repair_F.jpg)
+
+
 
 
 <br><br><br>
