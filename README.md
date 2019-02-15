@@ -1,7 +1,9 @@
 # ArmA Missions
 
 ## Scripts
-there are many scripts in the base template for each missions listing them all here is a work in progress
+there are many scripts in the base template 
+
+listing them all here is a work in progress
 
 
 **Jebus - Just Editor Based Unit Spawning** By dreadpirate,
