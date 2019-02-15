@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//---------------------DESCRIPTION.EXT----------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//---------------------INCLUDES-----------------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+
+cba_settings_hasSettingsFile = 1; // load cba settings from cba_settings.sqf
+enableDebugConsole = 1; //Allows access to the Debug Console outside of the editor during normal gameplay.0 = Default behavior, available only in editor, 1 = Available in SP and for hosts / logged in admins, 2 = Available for everyone
+
+////////////////////////////////////////////////////////////////////////////////
+//---------------------MISSION INFO-------------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+loadscreen = "ghostmission.paa";
+onLoadName = "Little War";
+onLoadMission = "A mission for Ghosts of Battle useing ALIVE";
+author = "*** YonV. ***";
+
+////////////////////////////////////////////////////////////////////////////////
+//---------------------MISSION SETTINGS---------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+
+//4enableDebugConsole = 1;			//0 für OFF, 1 für Admin only, 2 für alle.
+//enableDebugConsole = 1; //Allows access to the Debug Console outside of the editor during normal gameplay.0 = Default behavior, available only in editor, 1 = Available in SP and for hosts / logged in admins, 2 = Available for everyone
+//aikills = 0;					//show ai kills in score table
+disabledAI = 1;					//disable AI for all playable units
+
+respawnOnStart = 0;
+
+////THE FOLLOWING LINE IS NEEDED FOR GRIMES SIMPLE REVIVE DESCRIPTION.EXT.
+//#include "G_Revive\G_Desc_Include.hpp"
+////
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+//---------------------PARAMS SETTINGS----------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+/* class Extended_Init_EventHandlers {
+ class Man {
+  init = "_this call (compile preprocessFileLineNumbers 'scripts\blueaiinv.sqf')";
+ };
+}; */
+
+class CfgFunctions
+{
+	#include "vcom\cfgFunctions.hpp"
+	#include "jebus\cfgFunctions.hpp"
+};
+
+class Extended_PreInit_EventHandlers {
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_CBASettings.sqf";
+};

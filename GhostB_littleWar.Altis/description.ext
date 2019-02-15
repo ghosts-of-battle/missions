@@ -1,0 +1,31 @@
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//---------------------DESCRIPTION.EXT----------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//---------------------INCLUDES-----------------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+
+cba_settings_hasSettingsFile = 1; // load cba settings from cba_settings.sqf
+enableDebugConsole = 1; //Allows access to the Debug Console outside of the editor during normal gameplay.0 = Default behavior, available only in editor, 1 = Available in SP and for hosts / logged in admins, 2 = Available for everyone
+
+
+////////////////////////////////////////////////////////////////////////////////
+//---------------------PARAMS SETTINGS----------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+/* class Extended_Init_EventHandlers {
+ class Man {
+  init = "_this call (compile preprocessFileLineNumbers 'scripts\blueaiinv.sqf')";
+ };
+}; */
+
+class CfgFunctions
+{
+	#include "vcom\cfgFunctions.hpp"
+	#include "jebus\cfgFunctions.hpp"
+};
+
+class Extended_PreInit_EventHandlers {
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_CBASettings.sqf";
+};
