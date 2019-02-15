@@ -28,12 +28,14 @@ this setvariable ["CS_HEIGHT",_height]; //Altitude of the landing site
 
 this setvariable ["CS_CODE",""];
 
-this setVariable ["ace_medical_medicClass", 1];clearWeaponCargoGlobal this;clearMagazineCargoGlobal this;clearItemCargoGlobal this;this addItemCargoGlobal ["ACE_adenosine", 40];this addItemCargoGlobal ["ACE_atropine", 40];this addItemCargoGlobal ["ACE_fieldDressing", 40];this addItemCargoGlobal ["ACE_elasticBandage", 40];this addItemCargoGlobal ["ACE_bloodIV", 40];this addItemCargoGlobal ["ACE_bodyBag", 4];this addItemCargoGlobal ["ACE_CableTie", 6];this addItemCargoGlobal ["ACE_DefusalKit", 4];this addItemCargoGlobal ["ACE_epinephrine", 40];this addItemCargoGlobal ["ACE_Flashlight_XL50", 6];this addItemCargoGlobal ["ACE_morphine", 40];this addItemCargoGlobal ["ACE_packingBandage", 40];this addItemCargoGlobal ["ACE_personalAidKit", 40];this addItemCargoGlobal ["ACE_plasmaIV", 40];this addItemCargoGlobal ["ACE_salineIV", 40];this addItemCargoGlobal ["ACE_tourniquet", 10];this addItemCargoGlobal ["ACE_surgicalKit", 4];this addItemCargoGlobal ["ACE_EarPlugs", 4];this addItemCargoGlobal ["adv_aceCPR_AED", 2];
+this setVariable ["ace_medical_medicClass", 1];clearWeaponCargoGlobal this;clearMagazineCargoGlobal this;clearItemCargoGlobal this;this addItemCargoGlobal ["ACE_adenosine", 40];this addItemCargoGlobal ["ACE_atropine", 40];this addItemCargoGlobal ["ACE_fieldDressing", 40];this addItemCargoGlobal ["ACE_elasticBandage", 40];this addItemCargoGlobal ["ACE_bloodIV", 40];this addItemCargoGlobal ["ACE_bodyBag", 4];this addItemCargoGlobal ["ACE_CableTie", 6];this addItemCargoGlobal ["ACE_DefusalKit", 4];this addItemCargoGlobal ["ACE_epinephrine", 40];this addItemCargoGlobal ["ACE_Flashlight_XL50", 6];this addItemCargoGlobal ["ACE_morphine", 40];this addItemCargoGlobal ["ACE_packingBandage", 40];this addItemCargoGlobal ["ACE_personalAidKit", 40];this addItemCargoGlobal ["ACE_plasmaIV", 40];this addItemCargoGlobal ["ACE_salineIV", 40];this addItemCargoGlobal ["ACE_tourniquet", 10];this addItemCargoGlobal ["ACE_surgicalKit", 4];this addItemCargoGlobal ["ACE_EarPlugs", 4];
+
+this addItemCargoGlobal ["adv_aceCPR_AED", 2];
 
 
 
 
-this call ace_fastroping_fnc_equipFRIES;this addEventHandler ["HIT",{(_this select 0) setDamage (0.25 * damage (_this select 0));}];this setVehicleRadar 1;this setVehicleReceiveRemoteTargets true;this setVehicleReportOwnPosition true;this setVehicleReportRemoteTargets true;   
+this call ace_fastroping_fnc_equipFRIES;this addEventHandler ["HIT",{(_this select 0) setDamage (0.25 * damage (_this select 0));}];this setVehicleRadar 1;this setVehicleReceiveRemoteTargets true;this setVehicleReportOwnPosition true;this setVehicleReportRemoteTargets true;
 
 
 
@@ -58,11 +60,11 @@ this call ace_fastroping_fnc_equipFRIES;clearWeaponCargoGlobal this;clearMagazin
 
 
 
-this setvariable ["ace_medical_isMedicalFacility", true]; this addEventHandler [HIT,{(_this select 0) setDamage (0.00 * damage (this select 0));}]; 
+this setvariable ["ace_medical_isMedicalFacility", true]; this addEventHandler [HIT,{(_this select 0) setDamage (0.00 * damage (this select 0));}];
 
 
 
-this addEventHandler ["HandleDamage", {false}]; this setvariable ["ace_medical_isMedicalFacility", true]; this addEventhandler ["HIT",{_this select 0 setDamage (0.00 * damage (this select 0))}]; 
+this addEventHandler ["HandleDamage", {false}]; this setvariable ["ace_medical_isMedicalFacility", true]; this addEventhandler ["HIT",{_this select 0 setDamage (0.00 * damage (this select 0))}];
 
 this setvariable ["ace_medical_isMedicalFacility", true]; this addItemCargoGlobal ["ACE_adenosine", 40];this addItemCargoGlobal ["ACE_atropine", 40];this addItemCargoGlobal ["ACE_fieldDressing", 40];this addItemCargoGlobal ["ACE_elasticBandage", 40];this addItemCargoGlobal ["ACE_bloodIV", 40];this addItemCargoGlobal ["ACE_bodyBag", 4];this addItemCargoGlobal ["ACE_CableTie", 6];this addItemCargoGlobal ["ACE_DefusalKit", 4];this addItemCargoGlobal ["ACE_epinephrine", 40];this addItemCargoGlobal ["ACE_Flashlight_XL50", 6];this addItemCargoGlobal ["ACE_morphine", 40];this addItemCargoGlobal ["ACE_packingBandage", 40];this addItemCargoGlobal ["ACE_personalAidKit", 40];this addItemCargoGlobal ["ACE_plasmaIV", 40];this addItemCargoGlobal ["ACE_salineIV", 40];this addItemCargoGlobal ["ACE_tourniquet", 10];this addItemCargoGlobal ["ACE_surgicalKit", 4];this addItemCargoGlobal ["ACE_EarPlugs", 4];this addItemCargoGlobal ["adv_aceCPR_AED", 2];
 

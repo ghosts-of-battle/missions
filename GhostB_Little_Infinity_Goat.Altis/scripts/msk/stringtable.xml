@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project name="[MSK]_Heli_Door_Script">
+	<Package name="Action_names">
+		<Key ID="STR_[MSK]_RightDoorOpen">
+			<Original>Open Right Door</Original>
+			<English>Open Right Door</English>
+			<German>Rechte Tür öffnen</German>
+			<French>Ouvrir la porte droite</French>
+			<Dutch>Open rechter deur</Dutch>
+			<Russian>Открыть правую дверь</Russian>
+			<Spanish>Abrir Puerta Derecha</Spanish>
+			<Italian>Apri La Porta Destra</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_LeftDoorOpen">
+			<Original>Open Left Door</Original>
+			<English>Open Left Door</English>
+			<German>Linke Tür öffnen</German>
+			<French>Ouvrir la porte gauche</French>
+			<Dutch>Open linker deur</Dutch>
+			<Russian>Открыть левую дверь</Russian>
+			<Spanish>Abrir Puerta Izquierda</Spanish>
+			<Italian>Apri La Porta Sinistra</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_RightDoorClose">
+			<Original>Close Right Door</Original>
+			<English>Close Right Door</English>
+			<German>Rechte Tür schließen</German>
+			<French>Fermer la porte droite</French>
+			<Dutch>Sluit rechter deur</Dutch>
+			<Russian>Закрыть правую дверь</Russian>
+			<Spanish>Cerrar Puerta Derecha</Spanish>
+			<Italian>Chiudi La Porta Destra</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_LeftDoorClose">
+			<Original>Close Left Door</Original>
+			<English>Close Left Door</English>
+			<German>Linke Tür schließen</German>
+			<French>Fermer la porte gauche</French>
+			<Dutch>Sluit linker deur</Dutch>
+			<Russian>Закрыть левую дверь</Russian>
+			<Spanish>Cerrar Puerta Izquierda</Spanish>
+			<Italian>Chiudi La Porta Sinistra</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_LoadMasterDoorClose">
+			<Original>Close Loadmaster's Door</Original>
+			<English>Close Loadmaster's Door</English>
+			<German>Lademeistertür schließen</German>
+			<French>Fermer la porte du Loadmaster</French>
+			<Dutch>Sluit LoadMaster deur</Dutch>
+			<Russian>Закрыть дверь погрузчика</Russian>
+			<Spanish>Cerrar Puerta Del LoadMaster</Spanish>
+			<Italian>Chiudi Porta Del LoadMaster</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_LoadMasterDoorOpen">
+			<Original>Open Loadmaster's Door</Original>
+			<English>Open Loadmaster's Door</English>
+			<German>Lademeistertür öffnen</German>
+			<French>Ouvrir la porte du Loadmaster</French>
+			<Dutch>Open LoadMaster deur</Dutch>
+			<Russian>Открыть дверь погрузчика</Russian>
+			<Spanish>Abrir Puerta Del LoadMaster</Spanish>
+			<Italian>Apri Porta Del LoadMaster</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_PilotDoorOpen">
+			<Original>Open Pilot's Door</Original>
+			<English>Open Pilot's Door</English>
+			<German>Pilotentür öffnen</German>
+			<French>Ouvrir la porte du pilote</French>
+			<Dutch>Open piloot deur</Dutch>
+			<Russian>Открыть дверь пилота</Russian>
+			<Spanish>Abrir Puerta Piloto</Spanish>
+			<Italian>Apri Porta Del Pilota</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_PilotDoorClose">
+			<Original>Close Pilot's Door</Original>
+			<English>Close Pilot's Door</English>
+			<German>Pilotentür schließen</German>
+			<French>Fermer la porte du pilote</French>
+			<Dutch>Sluit piloot deur</Dutch>
+			<Russian>Закрыть дверь пилота</Russian>
+			<Spanish>Cerrar Puerta Piloto</Spanish>
+			<Italian>Chiudi Porta Del Pilota</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_CoPilotDoorOpen">
+			<Original>Open Copilot's Door</Original>
+			<English>Open Copilot's Door</English>
+			<German>Copilotentür öffnen</German>
+			<French>Ouvrir la porte du copilote</French>
+			<Dutch>Open co-piloot deur</Dutch>
+			<Russian>Открыть дверь второго пилота</Russian>
+			<Spanish>Abrir Puerta Copiloto</Spanish>
+			<Italian>Apri Porta Del Copilota</Italian>
+		</Key>
+		<Key ID="STR_[MSK]_CoPilotDoorClose">
+			<Original>Close Copilot's Door</Original>
+			<English>Close Copilot's Door</English>
+			<German>Copilotentür schließen</German>
+			<French>Ouvrir la porte du copilote</French>
+			<Dutch>Sluit co-piloot deur</Dutch>
+			<Russian>Закрыть дверь второго пилота</Russian>
+			<Spanish>Cerrar Puerta Copiloto</Spanish>
+			<Italian>Chiudi Porta Del copilota</Italian>
+		</Key>
+	</Package>
+</Project>

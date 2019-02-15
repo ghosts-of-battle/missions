@@ -6,64 +6,64 @@ tf_freq_west_lr = [0 ,7, ["50.6","71.3","48.3","70.5","35.1","37.2","46.7","42.8
 
 
 
-<br/><br/> 
-<font size='18'>ISSUES</font> 
-<br/>    
-<br/>  
-All side radio channels short range, long range, and vehicle should be synced, if issue occur look for map marker near spawn with sr ch1 and lr ch1.   
-<br/>  
-  
-<br/>  
-  
-<br/>  
-the ILBE packs have greater range and storage compared to vanilla long-range radios in ARMA, but changing antenna and setting satcom are broken due to ace3 bug  
- 
- <font size '18'Radio Frequencies</font>   
-<br/>  
- <br/>  
-Short Range NATO   
-Ch1 123.2   
-CH2 437.5   
-CH3 511.6  
-CH4 500.8   
-CH5 458.1  
-CH6 96.5   
-CH7 271.5  
-<br/> CH8 121.1  
-<br/>  
-  
-<br/>  
-  
-<br/>  
-Long Range  NATO  
-Ch1 50.6  
-Ch2 71.3   
-Ch3 48.3  
-Ch4 70.5  
-Ch5 35.1   
-Ch6 37.2  
-Ch7 46.7  
-Ch8 42.8  
-<br/> 
+<br/><br/>
+<font size='18'>ISSUES</font>
+<br/>
+<br/>
+All side radio channels short range, long range, and vehicle should be synced, if issue occur look for map marker near spawn with sr ch1 and lr ch1.
+<br/>
+
+<br/>
+
+<br/>
+the ILBE packs have greater range and storage compared to vanilla long-range radios in ARMA, but changing antenna and setting satcom are broken due to ace3 bug
+
+ <font size '18'Radio Frequencies</font>
+<br/>
+ <br/>
+Short Range NATO
+Ch1 123.2
+CH2 437.5
+CH3 511.6
+CH4 500.8
+CH5 458.1
+CH6 96.5
+CH7 271.5
+<br/> CH8 121.1
+<br/>
+
+<br/>
+
+<br/>
+Long Range  NATO
+Ch1 50.6
+Ch2 71.3
+Ch3 48.3
+Ch4 70.5
+Ch5 35.1
+Ch6 37.2
+Ch7 46.7
+Ch8 42.8
+<br/>
 Communications
 
 <br/>
 <font size '18'>Short Range Radios</font>
 <br/>
-Short Range radios frequencies are unique per detachment   
+Short Range radios frequencies are unique per detachment
 <br/>
 CH1 Detachment Network
 CH2 ODA Network
 CH3 ODB Network
 CH4-CH7 Leaders discretion
 CH8 - Guard Common Across all radions
-<br/> 
-<br/> 
-<br/> 
-<br/> 
-<font size '18'>Long Range Radios</font>   
 <br/>
-Channel 	Frequency	Purpose 
+<br/>
+<br/>
+<br/>
+<font size '18'>Long Range Radios</font>
+<br/>
+Channel 	Frequency	Purpose
 1			51Mhz		C2
 2			52Mhz		CAS - Fires
 3			53Mhz		Detachment Alpha Net
@@ -73,33 +73,33 @@ Channel 	Frequency	Purpose
 7			57Mhz		Detachment Echo Net
 8			58Mhz		Guard Common Across all radios
 9			59Mhz		Detachment HHC Net
-<br/> 
-<br/> 
-<br/> 
-<br/> 
+<br/>
+<br/>
+<br/>
+<br/>
 <font size '18'>The ILBE packs have greater range and storage compared to vanilla long-range radios in ARMA, Based on the Antenna</font>
-<br/> 
-<br/> 
+<br/>
+<br/>
 Antenna ranges
-<br/> 
+<br/>
 Whip: tf_range = 17000
 Whip extended: tf_range = 25000
 Blade: tf_range = 18000
 DD: tf_range = 15000
-<br/> 
-<br/> 
-<br/> 
-<br/> 
+<br/>
+<br/>
+<br/>
+<br/>
 
 <font size '18'>Smoke, handheld signal, ChemLight</font>
-<br/> 
+<br/>
 Green - On guard Channel (ch9)
 Red - MediVac (medic needed)
 White - Cold LZ
 Yellow - Hot LZ
-all other colors are targets 
-<br/> 
-<br/> 
+all other colors are targets
+<br/>
+<br/>
 
 
 
@@ -129,6 +129,7 @@ all other colors are targets
 
 51,52,53,54,55,56,57,58,59
 
+
 123.2,125.7,122.4,196.6,163.0,151.4,108.6,58
 123.2,135.2,127.5,135.4,131.2,167.7,139.4,58
 123.2,148.4,200.4,163.7,156.7,139.1,130.9,58
@@ -144,8 +145,8 @@ all other colors are targets
 
 
 
- this setFlagTexture 'armamission.paa'; _halo_jump =[2000,100,this] execVM "halo.sqf"; 
-this addAction["<t color='#551A8B'>Sanctuary</t>", {player setPos getMarkerPos("ALiVE_SUP_MULTISPAWN_RESPAWN_BLU_G_F")}]; 
+ this setFlagTexture 'armamission.paa'; _halo_jump =[2000,100,this] execVM "halo.sqf";
+this addAction["<t color='#551A8B'>Sanctuary</t>", {player setPos getMarkerPos("ALiVE_SUP_MULTISPAWN_RESPAWN_BLU_G_F")}];
 
 this setFlagTexture 'armamission.paa'; this addAction["<t color='#551A8B'>Halo Insertion</t>", "scripts\HaloJump.sqf"];
 
@@ -227,7 +228,7 @@ tf_freq_west  =   [0 ,7, ["423.2","437.5","411.6","430.8","458.1","466.5","471.5
 
 
 Short Range Radios
-Channel 	Frequency	Purpose 
+Channel 	Frequency	Purpose
 1			100Mhz		Group Net
 2			110Mhz		Detachment Alpha Net
 3			120Mhz		Detachment Bravo Net
@@ -240,8 +241,8 @@ Channel 	Frequency	Purpose
 
 
 
-Long Range Radios 
-Channel 	Frequency	Purpose 
+Long Range Radios
+Channel 	Frequency	Purpose
 1			51Mhz		C2
 2			52Mhz		CAS & Fires
 3			53Mhz		Detachment Alpha Net
@@ -253,12 +254,12 @@ Channel 	Frequency	Purpose
 9			59Mhz		Avaiable to be reprogramed
 
 
-Frequencies Avaiable to use 
+Frequencies Avaiable to use
 Alpha 	310Mhz to 319Mhz
 Bravo 	320Mhz to 329Mhz
 Charly 	330Mhz to 339Mhz
 Delta 	340Mhz to 349Mhz
-Echo 	350Mhz to 359Mhz	
+Echo 	350Mhz to 359Mhz
 HHC 	360Mhz to 369Mhz
 
 
@@ -267,59 +268,59 @@ HHC 	360Mhz to 369Mhz
 
 
 
-<br/><br/> 
-<font size '18'>Short Range Radios</font> 
-<br/> 
-Short Range radios frequencies are unique per detachment    
-<br/> 
-CH1 Detachment Network 
-CH2 ODA Network 
-CH3 ODB Network 
-CH4-CH7 Leaders discretion 
-CH8 - Guard Common Across all radions 
-<br/>  
-<br/>  
-<br/>  
-<br/>  
-<font size '18'>Long Range Radios</font>    
-<br/> 
-Channel  Frequency Purpose  
-1   51Mhz  C2 
-2   52Mhz  CAS - Fires 
-3   53Mhz  Detachment Alpha Net 
-4   54Mhz  Detachment Bravo Net 
-5   55Mhz  Detachment Delta Net 
-6   56Mhz  Detachment Charly Net 
-7   57Mhz  Detachment Echo Net 
-8   58Mhz  Guard Common Across all radios 
-9   59Mhz  Detachment HHC Net 
-<br/>  
-<br/>  
-<br/>  
-<br/>  
-<font size '18'>The ILBE packs have greater range and storage compared to vanilla long-range radios in ARMA, Based on the Antenna</font> 
-<br/>  
-<br/>  
-Antenna ranges 
-<br/>  
-Whip: tf_range = 17000 
-Whip extended: tf_range = 25000 
-Blade: tf_range = 18000 
-DD: tf_range = 15000 
-<br/>  
-<br/>  
-<br/>  
-<br/>  
- 
-<font size '18'>Smoke, handheld signal, ChemLight</font> 
-<br/>  
-Green - On guard Channel (ch9) 
-Red - MediVac (medic needed) 
-White - Cold LZ 
-Yellow - Hot LZ 
-all other colors are targets  
-<br/>  
-<br/> 
+<br/><br/>
+<font size '18'>Short Range Radios</font>
+<br/>
+Short Range radios frequencies are unique per detachment
+<br/>
+CH1 Detachment Network
+CH2 ODA Network
+CH3 ODB Network
+CH4-CH7 Leaders discretion
+CH8 - Guard Common Across all radions
+<br/>
+<br/>
+<br/>
+<br/>
+<font size '18'>Long Range Radios</font>
+<br/>
+Channel  Frequency Purpose
+1   51Mhz  C2
+2   52Mhz  CAS - Fires
+3   53Mhz  Detachment Alpha Net
+4   54Mhz  Detachment Bravo Net
+5   55Mhz  Detachment Delta Net
+6   56Mhz  Detachment Charly Net
+7   57Mhz  Detachment Echo Net
+8   58Mhz  Guard Common Across all radios
+9   59Mhz  Detachment HHC Net
+<br/>
+<br/>
+<br/>
+<br/>
+<font size '18'>The ILBE packs have greater range and storage compared to vanilla long-range radios in ARMA, Based on the Antenna</font>
+<br/>
+<br/>
+Antenna ranges
+<br/>
+Whip: tf_range = 17000
+Whip extended: tf_range = 25000
+Blade: tf_range = 18000
+DD: tf_range = 15000
+<br/>
+<br/>
+<br/>
+<br/>
+
+<font size '18'>Smoke, handheld signal, ChemLight</font>
+<br/>
+Green - On guard Channel (ch9)
+Red - MediVac (medic needed)
+White - Cold LZ
+Yellow - Hot LZ
+all other colors are targets
+<br/>
+<br/>
 
 
 
@@ -333,9 +334,9 @@ class CfgUnitInsignia
 {
 	class redcrystal_ca
 	{
-		displayName = "redcrystal_ca"; 
+		displayName = "redcrystal_ca";
 		author = "Bohemia Interactive";
-		texture = "\A3\ui_f_orange\data\cfgmarkers\redcrystal_ca.paa"; 
+		texture = "\A3\ui_f_orange\data\cfgmarkers\redcrystal_ca.paa";
 	};
 };
 
