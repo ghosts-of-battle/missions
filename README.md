@@ -14,26 +14,26 @@ listing them all here is a work in progress
 
 [**Enhanced High & Low Script** By Rodeostar42,](https://forums.bohemia.net/forums/topic/189776-enhanced-high-low-script/)
 
-,,,
+<br><br>
 ## GHOSTB_PUB_[mission]
 
 
 ### use the following mods
 
-CBA_A3
-http://steamcommunity.com/sharedfiles/filedetails/?id=450814997
+[CBA_A3]
+(http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 
-ace
-http://steamcommunity.com/sharedfiles/filedetails/?id=463939057
+[ace]
+(http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 
-Spyder Addons
-http://steamcommunity.com/sharedfiles/filedetails/?id=579263829
+[Spyder Addons]
+(http://steamcommunity.com/sharedfiles/filedetails/?id=579263829)
 
-ALiVE
-http://steamcommunity.com/sharedfiles/filedetails/?id=620260972
+[ALiVE]
+(http://steamcommunity.com/sharedfiles/filedetails/?id=620260972)
 
-Vcom AI V3.2.1
-http://steamcommunity.com/sharedfiles/filedetails/?id=1645358402
+[Vcom AI V3.2.1]
+(http://steamcommunity.com/sharedfiles/filedetails/?id=1645358402)
 
 
 ## Communications
