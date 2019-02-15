@@ -10,12 +10,11 @@ listing them all here is a work in progress
 [**Jebus - Just Editor Based Unit Spawning** By dreadpirate,](https://forums.bohemia.net/forums/topic/174661-jebus-just-editor-based-unit-spawning/)
 
 
-**Addon-Free ArmA Radio** By phronk,
->https://forums.bohemia.net/forums/topic/200791-release-addon-free-arma-radio/
+[**Addon-Free ArmA Radio** By phronk,](https://forums.bohemia.net/forums/topic/200791-release-addon-free-arma-radio/)
 
-**Enhanced High & Low Script**
-By Rodeostar42,
->https://forums.bohemia.net/forums/topic/189776-enhanced-high-low-script/
+[**Enhanced High & Low Script** By Rodeostar42,](https://forums.bohemia.net/forums/topic/189776-enhanced-high-low-script/)
+
+,,,
 ## GHOSTB_PUB_[mission]
 
 
