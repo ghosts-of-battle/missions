@@ -4,8 +4,54 @@
 |Outfit Tag|PUB|SIZE|OPERATION NAME|MAP|
 | --- | --- | --- | --- | --- |
 
+### SIZE
+Small = 1,200 to 9,600 AI , For Hosted ARMA Servers
+Large = 24,00 to 19,200 AI , For A dedicated ARMA Server (a real server)
+
+### PUB
+A mission with PUB is a vanilla mission
+#### use's the following mods
+
+[CBA_A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+
+[ace](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+
+[Spyder Addons](http://steamcommunity.com/sharedfiles/filedetails/?id=579263829)
+
+[ALiVE](http://steamcommunity.com/sharedfiles/filedetails/?id=620260972)
+
+[Vcom AI V3.2.1](http://steamcommunity.com/sharedfiles/filedetails/?id=1645358402)
+
+A mission without PUB is a Ghost of Battle Mission
+#### use's the following mods
+[CBA_A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
+
+[ace](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+
+[Spyder Addons](http://steamcommunity.com/sharedfiles/filedetails/?id=579263829)
+
+[ALiVE](http://steamcommunity.com/sharedfiles/filedetails/?id=620260972)
+
+[Vcom AI V3.2.1](http://steamcommunity.com/sharedfiles/filedetails/?id=1645358402)
+
+[ADV - ACE Medical](http://steamcommunity.com/sharedfiles/filedetails/?id=1353873848)
+
+[Drongo's Air Operations](http://steamcommunity.com/sharedfiles/filedetails/?id=1533097069)
+
+[Ghosts of Battle - Drongo's](http://steamcommunity.com/sharedfiles/filedetails/?id=1480969784)
+
+[ILBE Assault Pack (TFAR)](http://steamcommunity.com/sharedfiles/filedetails/?id=873999690)
+
+[ILBE Assault Pack RF-3080 Fix](http://steamcommunity.com/sharedfiles/filedetails/?id=1214067354)
+
+[Task Force Arrowhead Radio (BETA!!!)](http://steamcommunity.com/sharedfiles/filedetails/?id=894678801)
 
 
+### OPERATION NAME
+Some stupid name, from an military operation name generator
+
+### MAP
+Where you will be shot
 <br><br><br>
 ## Scripts
 there are many scripts in the base template
@@ -19,16 +65,20 @@ listing them all here is a work in progress
 [**Enhanced High & Low Script** By Rodeostar42,](https://forums.bohemia.net/forums/topic/189776-enhanced-high-low-script/)
 
 <br><br><br>
-## GHOSTB_PUB_[mission]
+## Support
 
+### Loadout Organizer
+- Save, Load, Delete, and Name loadouts
+- View class gear before loading it
+- Transfer loadouts to other players and AI
+- Access Virtual Arsenal
+- Load class on respawn
+![loadout Organizer](https://community.bistudio.com/wiki/File:B_Slingload_01_Cargo_F.jpg)
 
-### use the following mods
+### Vehicle Spawner
+- View vehicle characteristics such as top speed, number of passenger seats, fuel consumption and more prior to spawning it.
+![vehicle spawning](https://community.bistudio.com/wikidata/images/thumb/9/9a/B_Slingload_01_Repair_F.jpg/150px-B_Slingload_01_Repair_F.jpg)
 
-[CBA_A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-[ace](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
-[Spyder Addons](http://steamcommunity.com/sharedfiles/filedetails/?id=579263829)
-[ALiVE](http://steamcommunity.com/sharedfiles/filedetails/?id=620260972)
-[Vcom AI V3.2.1](http://steamcommunity.com/sharedfiles/filedetails/?id=1645358402)
 
 <br><br><br>
 ## Communications
