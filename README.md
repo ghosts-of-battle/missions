@@ -1,5 +1,10 @@
 # ArmA Missions
-## Mission
+<br><br><br>
+## Mission Naming
+|Outfit Tag|PUB|SIZE|OPERATION NAME|MAP|
+| --- | --- | --- | --- | --- |
+
+
 
 <br><br><br>
 ## Scripts
@@ -8,7 +13,6 @@ there are many scripts in the base template
 listing them all here is a work in progress
 
 [**Jebus - Just Editor Based Unit Spawning** By dreadpirate,](https://forums.bohemia.net/forums/topic/174661-jebus-just-editor-based-unit-spawning/)
-
 
 [**Addon-Free ArmA Radio** By phronk,](https://forums.bohemia.net/forums/topic/200791-release-addon-free-arma-radio/)
 
@@ -21,13 +25,9 @@ listing them all here is a work in progress
 ### use the following mods
 
 [CBA_A3](http://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-
 [ace](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
-
 [Spyder Addons](http://steamcommunity.com/sharedfiles/filedetails/?id=579263829)
-
 [ALiVE](http://steamcommunity.com/sharedfiles/filedetails/?id=620260972)
-
 [Vcom AI V3.2.1](http://steamcommunity.com/sharedfiles/filedetails/?id=1645358402)
 
 <br><br><br>
@@ -36,6 +36,7 @@ listing them all here is a work in progress
 | CH1 | CH2 | CH3 | CH4 | CH5 | CH6 | CH7 | CH8 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |51|52|53|54|55|56|57|58|59|
+
 <br><br>
 ### Short Range
 |Group | CH1 | CH2 | CH3 | CH4 | CH5 | CH6 | CH7 | CH8 |
