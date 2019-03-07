@@ -34,8 +34,9 @@ ace_arsenal_fontHeight = 4.5;
 // ACE Captives
 force ace_captives_allowHandcuffOwnSide = true;
 force ace_captives_allowSurrender = true;
-force ace_captives_requireSurrender = 1;
+force ace_captives_requireSurrender = 2;
 force ace_captives_requireSurrenderAi = false;
+
 
 // ACE Common
 force ace_common_allowFadeMusic = true;
@@ -47,7 +48,7 @@ ace_common_displayTextFontColor = [1,1,1,1];
 ace_common_settingFeedbackIcons = 1;
 ace_common_settingProgressBarLocation = 0;
 force ace_noradio_enabled = true;
-force ace_parachute_hideAltimeter = true;
+force ace_parachute_hideAltimeter = false;
 
 // ACE Cook off
 force ace_cookoff_ammoCookoffDuration = 0.5;
@@ -140,10 +141,10 @@ ace_maptools_rotateModifierKey = 1;
 // ACE Medical
 force ace_medical_ai_enabledFor = 2;
 force ace_medical_AIDamageThreshold = 1;
-force ace_medical_allowLitterCreation = false;
+force ace_medical_allowLitterCreation = true;
 force ace_medical_allowUnconsciousAnimationOnTreatment = true;
 force ace_medical_amountOfReviveLives = -1;
-force ace_medical_bleedingCoefficient = 0.8;
+force ace_medical_bleedingCoefficient = 1;
 force ace_medical_blood_enabledFor = 2;
 force ace_medical_consumeItem_PAK = 1;
 force ace_medical_consumeItem_SurgicalKit = 0;
@@ -151,38 +152,39 @@ force ace_medical_delayUnconCaptive = 3;
 force ace_medical_enableAdvancedWounds = true;
 force ace_medical_enableFor = 0;
 force ace_medical_enableOverdosing = true;
-force ace_medical_enableRevive = 1;
+force ace_medical_enableRevive = 2;
 force ace_medical_enableScreams = true;
-force ace_medical_enableUnconsciousnessAI = 0;
+force ace_medical_enableUnconsciousnessAI = 1;
 force ace_medical_enableVehicleCrashes = true;
-force ace_medical_healHitPointAfterAdvBandage = true;
+force ace_medical_healHitPointAfterAdvBandage = false;
 force ace_medical_increaseTrainingInLocations = true;
 force ace_medical_keepLocalSettingsSynced = true;
 force ace_medical_level = 2;
 force ace_medical_litterCleanUpDelay = 0;
-force ace_medical_litterSimulationDetail = 0;
-force ace_medical_maxReviveTime = 1200;
+force ace_medical_litterSimulationDetail = 3;
+force ace_medical_maxReviveTime = 120;
 force ace_medical_medicSetting = 2;
 force ace_medical_medicSetting_basicEpi = 1;
-force ace_medical_medicSetting_PAK = 2;
-force ace_medical_medicSetting_SurgicalKit = 2;
+force ace_medical_medicSetting_PAK = 1;
+force ace_medical_medicSetting_SurgicalKit = 1;
 force ace_medical_menu_allow = 1;
-force ace_medical_menu_maxRange = 5;
+force ace_medical_menu_maxRange = 3;
 ace_medical_menu_openAfterTreatment = true;
-ace_medical_menu_useMenu = 1;
+force ace_medical_menu_useMenu = 2;
 ace_medical_menuTypeStyle = 0;
 force ace_medical_moveUnitsFromGroupOnUnconscious = false;
-force ace_medical_painCoefficient = 0.8;
+force ace_medical_painCoefficient = 1;
 ace_medical_painEffectType = 0;
 force ace_medical_painIsOnlySuppressed = true;
-force ace_medical_playerDamageThreshold = 1.4;
+force ace_medical_playerDamageThreshold = 2;
 force ace_medical_preventInstaDeath = true;
 force ace_medical_remoteControlledAI = true;
 force ace_medical_useCondition_PAK = 0;
-force ace_medical_useCondition_SurgicalKit = 0;
+force ace_medical_useCondition_SurgicalKit = 1;
 force ace_medical_useLocation_basicEpi = 0;
 force ace_medical_useLocation_PAK = 3;
-force ace_medical_useLocation_SurgicalKit = 0;
+force ace_medical_useLocation_SurgicalKit = 2;
+
 
 // ACE Mk6 Mortar
 force ace_mk6mortar_airResistanceEnabled = true;
@@ -394,11 +396,11 @@ force dzn_EJAM_SubsonicJamEffectSetting = "20";
 force MRH_MilsimTools_FireSupport_CAS_ConditionIsFormLeader = false;
 force MRH_MilsimTools_FireSupport_CAS_CustomCondition = "(isFormationLeader player) && ([player, 'ACRE_PRC117F'] call acre_api_fnc_hasKindOfRadio)";
 force MRH_MilsimTools_FireSupport_CAS_isCustomConditionSet = false;
-force MRH_MilsimTools_FireSupport_CASPlanesBluFor = "B_Plane_CAS_01_dynamicLoadout_F,B_Plane_Fighter_01_F,B_UAV_02_dynamicLoadout_F,B_UAV_05_F";
+force MRH_MilsimTools_FireSupport_CASPlanesBluFor = "B_Plane_CAS_01_F";
 force MRH_MilsimTools_FireSupport_CASPlanesInde = "I_Plane_Fighter_04_F,I_Plane_Fighter_03_dynamicLoadout_F";
 force MRH_MilsimTools_FireSupport_CASPlanesOpFor = "O_Plane_Fighter_02_F,O_UAV_02_dynamicLoadout_F,O_Plane_CAS_02_dynamicLoadout_F";
-force MRH_MilsimTools_FireSupport_CASShots = "5";
-force MRH_MilsimTools_FireSupport_useCASSupport = false;
+force MRH_MilsimTools_FireSupport_CASShots = "25";
+force MRH_MilsimTools_FireSupport_useCASSupport = true;
 
 // MRH_MilsimTools - Core settings
 force MRH_MilsimTools_AdminCasualtiesCap = 60;
@@ -416,12 +418,12 @@ force MRH_MilsimTools_Map_ReplaceVanillaMap = true;
 force MRH_MilsimTools_Map_ZoomRatio = 0.3;
 
 // MRH_MilsimTools - Fire Suppport
-force MRH_MilsimTools_FireSupport_ArtyMagazines = "32Rnd_155mm_Mo_shells,6Rnd_155mm_Mo_smoke,6Rnd_155mm_Mo_mine,2Rnd_155mm_Mo_Cluster,6Rnd_155mm_Mo_AT_mine";
-force MRH_MilsimTools_FireSupport_ArtyShots = "10";
+force MRH_MilsimTools_FireSupport_ArtyMagazines = "32Rnd_155mm_Mo_shells,6Rnd_155mm_Mo_smoke,6Rnd_155mm_Mo_mine,2Rnd_155mm_Mo_Cluster,6Rnd_155mm_Mo_AT_mine,magazine_Missiles_Cruise_01_x18,magazine_Missiles_Cruise_01_Cluster_x18";
+force MRH_MilsimTools_FireSupport_ArtyShots = "25";
 force MRH_MilsimTools_FireSupport_ConditionIsFormLeader = false;
 force MRH_MilsimTools_FireSupport_CustomCondition = "(isFormationLeader player) && ([player, 'ACRE_PRC117F'] call acre_api_fnc_hasKindOfRadio)";
 force MRH_MilsimTools_FireSupport_isCustomConditionSet = false;
-force MRH_MilsimTools_FireSupport_useFireSupport = false;
+force MRH_MilsimTools_FireSupport_useFireSupport = true;
 
 // MRH_MilsimTools - Hacking settings
 force MRH_MilsimTools_RequireHackingTool = true;

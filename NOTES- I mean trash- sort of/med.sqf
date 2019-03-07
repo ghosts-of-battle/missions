@@ -22,3 +22,7 @@ this addItemCargoGlobal ["ACE_tourniquet", 40];
 this addItemCargoGlobal ["ACE_surgicalKit", 8];
 this addItemCargoGlobal ["ACE_EarPlugs", 10];
 this addItemCargoGlobal ["adv_aceCPR_AED", 4];
+
+
+
+[objNull, this] call ace_medical_fnc_treatmentAdvanced_fullHeal;

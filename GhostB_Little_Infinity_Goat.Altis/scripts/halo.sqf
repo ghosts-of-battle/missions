@@ -1,14 +1,15 @@
 /*
-V1.3.5 Script by: Ghost put this in an objects init line - ghst_halo = host1 addAction ["Halo", "ghst_halo.sqf", 6, true, true, "","alive _target"];
+V1.3.5 Script by: Ghost put this in an objects init line - halo = host1 addAction ["Halo", "halo.sqf", 6, true, true, "","alive _target"];
 */
 
 _host = _this select 0;
 _caller = _this select 1;
 _id = _this select 2;
-_althalo = 3000; //altitude of halo jump
+_althalo = 6000; //altitude of halo jump
 _timeout = 300;	//change to 30 minutes.
+/*
 _altchute = 100;//altitude for autochute deployment
-
+*/
 
 _elapsedTime = 86400; //24 hours
 
@@ -21,8 +22,15 @@ if !(isNil {_caller getVariable "HALO_last_time"}) then
 	_elapsedTime 	= time - _lasttime;
 };
 
+_Uniform = ["U_I_pilotCoveralls"];
+_HeadGear = ["H_PilotHelmetFighter_I"];
+_Chute = ["MRH_AADEquippedParachute","B_Parachute"];
+
 if (_elapsedTime < _timeout) exitWith {_caller groupchat format["Next HALO flight will be ready in %1 seconds.", (round(_timeout - _elapsedTime))];};
-if (not ("B_Parachute" == typeOf (unitBackpack _caller))) 	exitwith {_caller groupchat "You will need a parachute to HALO.";};
+if (not ((backpack _caller) in _Chute)) exitwith {_caller groupchat "You will need a parachute, Burn Baby Burn.";};
+if (not ((uniform _caller) in _Uniform)) exitwith {_caller groupchat "You will need a proper uniform, Not Dressed Like that, this is not your high school prom.";};
+if (not ((headgear _caller) in _HeadGear)) 	exitwith {_caller groupchat "You will need Oxygen, Well arn't you special, not needing to breath and all.";};
+
 
 private ["_pos"];
 _caller groupchat "Left click on the map where you want to insert";

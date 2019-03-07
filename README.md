@@ -92,7 +92,7 @@ listing them all here is a work in progress
 
 
 <br><br><br>
-## Communications
+## Communications BLUE
 ### Long Range
 | CH1 | CH2 | CH3 | CH4 | CH5 | CH6 | CH7 | CH8 |
 | --- | --- | --- | --- | --- | --- | --- | --- |

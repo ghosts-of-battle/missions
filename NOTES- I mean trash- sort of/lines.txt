@@ -17,3 +17,14 @@ Password: 6GACIiFed752DtCV6a7P
 steamcmd.exe +login anonymous +workshop_download_item 107410 789444133 +quit
 
 runas /user:TCAGame steamcmd.exe +login anonymous +workshop_download_item 107410 789444133 +quit
+
+
+class gk0
+{
+  name = "fire1"; // Display Name for editor
+  sound[] = {"\scripts\sound\gk0.ogg", 2, 1.0};
+  titles[]={}; //Do not use unless you know what you are doing!
+};
+
+
+gk0,gk1,gk2,gk3,gk4,gk5,gk6,gk7,gk8,gk9,gk10,gk11

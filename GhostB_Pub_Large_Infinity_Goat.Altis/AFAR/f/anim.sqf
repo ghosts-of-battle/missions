@@ -1,1 +1,0 @@
-if(r_Anm)then{if(cameraView=="Gunner")exitWith{};if(isNull objectParent player&&incapacitatedState player=="")then{player playAction"HandSignalRadio";};};

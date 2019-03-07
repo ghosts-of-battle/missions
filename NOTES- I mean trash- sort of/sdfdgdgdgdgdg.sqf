@@ -13,7 +13,7 @@ this setvariable ["CS_HEIGHT",_height]; //Altitude of the landing site
 
 
 
-
+(group this)  addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];this setVehicleRadar 1;this setVehicleReceiveRemoteTargets true;this setVehicleReportOwnPosition true;this setVehicleReportRemoteTargets true;
 
 
 
