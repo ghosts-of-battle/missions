@@ -1,0 +1,71 @@
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//---------------------DESCRIPTION.EXT----------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+author			= "YonV";
+OnLoadName		= "Operation Spartan Conflict";
+OnLoadMission	= "Go forth and be killed";
+loadScreen		= "images\ghostmission.paa";
+taskManagement_propagate = 1;
+taskManagement_markers3D = 1;
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 8;	// maximum number of players the mission supports
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// INCLUDES 																																	//
+////////////////////////////////////////////////////////////////////////////////
+
+cba_settings_hasSettingsFile = 1; // load cba settings from cba_settings.sqf
+enableDebugConsole = 1; //Allows access to the Debug Console outside of the editor during normal gameplay.0 = Default behavior, available only in editor, 1 = Available in SP and for hosts / logged in admins, 2 = Available for everyone
+
+////////////////////////////////////////////////////////////////////////////////
+// CfgFunctions																																//
+////////////////////////////////////////////////////////////////////////////////
+class CfgFunctions
+{
+	#include "jebus\cfgFunctions.hpp"
+	#include "vcom\cfgFunctions.hpp"
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// CfgRemoteExec																															//
+////////////////////////////////////////////////////////////////////////////////
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+		class AR_Client_Rappel_From_Heli { allowedTargets=0; };
+		class AR_Hint { allowedTargets=1; };
+		class AR_Hide_Object_Global { allowedTargets=2; };
+		class AR_Enable_Rappelling_Animation { allowedTargets=2; };
+		class AR_Rappel_From_Heli { allowedTargets=2; };
+	};
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// Extended_PreInit_EventHandlers																							//
+////////////////////////////////////////////////////////////////////////////////
+class Extended_PreInit_EventHandlers {
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
+};
+////////////////////////////////////////////////////////////////////////////////
+// CfgSounds																																	//
+////////////////////////////////////////////////////////////////////////////////
+class CfgSounds {
+	#include "sounds\define.hpp"
+	sounds[]={};
+};

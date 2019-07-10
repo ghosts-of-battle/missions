@@ -112,7 +112,7 @@ all other colors are targets
 
 
 
-
+ -ip=11.22.33.44 -port=2302 "-config=C:\arma\TADST\GhostB\TADST_config.cfg"  "-cfg=C:\arma\TADST\GhostB\TADST_basic.cfg" "-bepath=C:\arma\battleye" "-servermod=@aliveserver;@arametrics;" "-profiles=C:\arma\TADST\GhostB"  -noTexHeaders -name=GhostB_Pub -malloc=tbb4malloc_bi_x64 -hugepages -enableHT -filePatching -LoadMissionToMemory "-mod=;"
 
 
 

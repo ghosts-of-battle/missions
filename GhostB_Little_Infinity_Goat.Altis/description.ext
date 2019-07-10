@@ -6,6 +6,8 @@ author			= "YonV";
 OnLoadName		= "Operation Infinity Goat (small)";
 OnLoadMission	= "Go forth and be killed";
 loadScreen		= "images\ghostmission.paa";
+taskManagement_propagate = 1;
+taskManagement_markers3D = 1;
 
 class Header
 {
@@ -30,7 +32,7 @@ class CfgFunctions
 	#include "vcom\cfgFunctions.hpp"
 	// Survivable Crashes Script start
 
-	class r0ed
+	/* class r0ed
 	{
 		tag = "r0ed";
 		class SurvivableCrashes
@@ -41,7 +43,7 @@ class CfgFunctions
 			class vehicleInit{};
 		};
 	};
-		// Survivable Crashes Script end
+		// Survivable Crashes Script end */
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -76,16 +78,50 @@ class CfgRemoteExec
 };
 
 ////////////////////////////////////////////////////////////////////////////////
-// add on free radio																													//
-////////////////////////////////////////////////////////////////////////////////
-#include "AFAR\UI\defines.hpp"
-#include "AFAR\UI\dialogs.hpp"
-
-////////////////////////////////////////////////////////////////////////////////
 // CfgSounds																																	//
 ////////////////////////////////////////////////////////////////////////////////
 class CfgSounds {
-	#include "AFAR\f\SFX.hpp"
 	#include "sounds\define.hpp"
 	sounds[]={};
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// wonder if this works 																											//
+////////////////////////////////////////////////////////////////////////////////
+
+difficulty="custom";
+class DifficultyPresets
+{
+	class CustomDifficulty
+	{
+		class Options
+		{
+			reducedDamage=0;
+			groupIndicators=0;
+			friendlyTags=0;
+			enemyTags=0;
+			detectedMines=0;
+			commands=0;
+			waypoints=0;
+			weaponInfo=1;
+			stanceIndicator=1;
+			staminaBar=1;
+			weaponCrosshair=0;
+			visionAid=0;
+			thirdPersonView=0;
+			cameraShake=1;
+			scoreTable=0;
+			deathMessages=0;
+			vonID=0;
+			mapContent=0;
+			autoReport=0;
+			multipleSaves=1;
+		};
+		aiLevelPreset=2;
+		class CustomAILevel
+		{
+			skillAI=0.75;
+			precisionAI=0.55000001;
+		};
+	};
 };

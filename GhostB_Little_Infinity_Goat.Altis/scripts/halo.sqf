@@ -16,9 +16,9 @@ _elapsedTime = 86400; //24 hours
 if (not alive _host) 												exitwith {hint "Halo Not Available"; _host removeaction _id;};
 
 //special case: first time halo
-if !(isNil {_caller getVariable "HALO_last_time"}) then
+if !(isNil {_caller getVariable "jump_last_time"}) then
 {
-	_lastTime 		= _caller getVariable "HALO_last_time";
+	_lastTime 		= _caller getVariable "jump_last_time";
 	_elapsedTime 	= time - _lasttime;
 };
 
@@ -56,4 +56,4 @@ _caller groupchat "Dont forget to open your chute!";
 //auto open before impact
 //waituntil {(position _caller select 2) <= _altchute};
 
-_caller setVariable ["HALO_last_time", time];
+_caller setVariable ["jump_last_time", time];

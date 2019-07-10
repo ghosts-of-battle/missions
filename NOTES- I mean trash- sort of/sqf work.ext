@@ -1,0 +1,59 @@
+class B_Heli_Transport_01_F;
+class GhostB_B_Heli_Transport_01_F_Sand: B_Heli_Transport_01_F
+{
+  author="YonV";
+  _generalMacro="B_Heli_Transport_01_F";
+  displayName="GhostHawk(Sand)"; /// how is the heli displayed in editor
+  vehicleClass="Support";
+  faction="GOB_F";
+  crew="B_Helipilot_F";
+  typicalCargo[]=
+  {
+    "B_Soldier_F"
+  };
+  side=1;
+  scope=2;
+  attendant=1;
+  armor = 250
+  pilotLight = false;
+  threat[]={0,0,0};
+  hiddenSelectionsTextures[]=
+  {
+    "\helicopters\heli_transport_01_ext01_sand_co_gob.paa",
+    "\helicopters\heli_transport_01_ext02_sand_co_gob.paa"
+  };
+  textureList[]=
+  {
+    "sand1",
+    1
+  };
+};
+class GhostB_B_Heli_Transport_01_F_Tropic: B_Heli_Transport_01_F
+{
+  author="YonV";
+  _generalMacro="B_Heli_Transport_01_F";
+  displayName="GhostHawk(Tropic)"; /// how is the heli displayed in editor
+  vehicleClass="Support";
+  faction="GOB_F";
+  crew="B_Helipilot_F";
+  typicalCargo[]=
+  {
+    "B_Soldier_F"
+  };
+  side=1;
+  scope=2;
+  attendant=1;
+  armor = 250
+  pilotLight = false;
+  threat[]={0,0,0};
+  hiddenSelectionsTextures[]=
+  {
+    "\helicopters\heli_transport_01_ext01_tropic_co_gob.paa",
+    "\helicopters\heli_transport_01_ext02_tropic_co_gob.paa"
+  };
+  textureList[]=
+  {
+    "sand1",
+    1
+  };
+};
