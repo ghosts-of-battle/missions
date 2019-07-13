@@ -108,8 +108,8 @@ this setvariable ["CS_CODE",'this setVariable ["Vcm_Disable",true];']
 
 (group this) setVariable ["Vcm_Disable",true]; (group this)  addeventhandler ["fired", {(_this select 0) setvehicleammo 1}]; (group this)  addEventhandler ["HIT",{_this select 0 setDamage (0.10 * damage (this select 0))}];
 
-
-
+null = [this, 25, 3000, 1.1, 0.15, 0.30, 0.55, 24] execVM "scripts\trindisplay\diverstats.sqf";
+null = [this, 25, 3000, 1.3, 0.15, 0.30, 0.55, 25] execVM "scripts\trindisplay\diverstats.sqf";
 
 
 this removeWeapon "CUP_weapon_mastersafe";
