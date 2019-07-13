@@ -257,3 +257,31 @@ To wake up a patient the use of a PAK is required.<br/><br/>
 Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.<br/><br/>
 Each successful round of CPR (filled up completion bar) increases the time left in the revive state.<br/><br/>
 "]];
+
+_med12 = player createDiaryRecord ["MedicalHelp", ["Practice patient","
+<br/>
+You need to be server admin <br/><br/>
+author: Tiberius<br/><br/>
+Version: V001<br/><br/>
+2017<br/><br/>
+<br/><br/>
+This script will spawn a civilian unit with ACE wounds as a practice patient.<br/><br/>
+Use the following commandline to exec the script:<br/><br/>
+<br/><br/>
+null = [POSITION, DISTANCE, MODE] execVM "Tib_practicePatient\Tib_medical.sqf";<br/><br/>
+<br/><br/>
+POSITION: 	the position of an object. It will be the spawn position. <br/><br/>
+		Use PLAYER for player. Do not use markers.  <br/><br/>
+<br/><br/>
+DISTANCEL:	The Distance between the spawnposition and the patient <br/><br/>
+		to trigger the despawn of patient. <br/><br/>
+<br/><br/>
+MODE:		1, 2 or 3;<br/><br/>
+		Mode 1 is minor injured patient. <br/><br/>
+		Mode 2 is severe injured patient. <br/><br/>
+		Mode 3 is patient with cardiac arrest. <br/><br/>
+<br/><br/>
+Example: null = [spawnPos, 10, 1] execVM "scripts\Tib_medical.sqf";<br/><br/>
+<br/><br/>
+
+"]];

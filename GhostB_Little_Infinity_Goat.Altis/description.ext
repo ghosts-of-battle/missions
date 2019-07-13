@@ -30,20 +30,6 @@ class CfgFunctions
 {
 	#include "jebus\cfgFunctions.hpp"
 	#include "vcom\cfgFunctions.hpp"
-	// Survivable Crashes Script start
-
-	/* class r0ed
-	{
-		tag = "r0ed";
-		class SurvivableCrashes
-		{
-			file = "r0ed_SurvivableCrashes\functions";
-			class vehicleCrashLocal{};
-			class crashVisualEffects{};
-			class vehicleInit{};
-		};
-	};
-		// Survivable Crashes Script end */
 };
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -28,8 +28,6 @@ waitUntil {scriptDone _base1};
 _base2 = [] execVM "simple\base2.sqf";
 waitUntil {scriptDone _base2};
 
-
-
 ////////////////////////////////////////////////////////////////////////////////
 // VCOM AI 																																		//
 // https://github.com/genesis92x/VcomAI-3.0      			  											//
