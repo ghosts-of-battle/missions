@@ -1,0 +1,7 @@
+/mission.sqm
+/release/*
+*.psd
+/.vscode/*
+/tmp
+/doc/*
+cScripts/script_component.hpp

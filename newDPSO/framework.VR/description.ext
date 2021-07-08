@@ -1,0 +1,263 @@
+////////////////////////////////////////////////////////////////////////////////
+//---------------------DESCRIPTION.EXT----------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// GENERAL SETTINGS
+////////////////////////////////////////////////////////////////////////////////
+
+	cba_settings_hasSettingsFile = 1; // load cba settings from cba_settings.sqf
+
+	forceRotorLibSimulation = 0; // Enable/ disable AFM  0 - options based; 1 - force enable; 2 - force disable
+
+	//disableChannels[] = {0,1,2,3,4,5,6};
+	joinUnassigned = 1;		// <!-- Where 0 forces joining players into the first empty slot, 1 leaves them to select their own
+	showGPS = 0;
+	respawnOnStart = -1;
+
+	// Respawn settings
+	respawn = "BASE";
+	respawnButton = 1;
+	respawnDelay = 4;
+	respawnDialog = 0;
+
+	ReviveMode = 0;                         //0: disabled, 1: enabled, 2: controlled by player attributes
+	ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
+	ReviveRequiredTrait = 0;                //0: none, 1: medic trait is required
+	ReviveRequiredItems = 1;                //0: none, 1: medkit, 2: medkit or first aid kit
+	ReviveRequiredItemsFakConsumed = 1;     //0: first aid kit is not consumed upon revive, 1: first aid kit is consumed
+	ReviveDelay = 60;                       //time needed to revive someone (in secs)
+	ReviveMedicSpeedMultiplier = 4;         //speed multiplier for revive performed by medic
+	ReviveForceRespawnDelay = 10;           //time needed to perform force respawn (in secs)
+	ReviveBleedOutDelay = 180;              //unconscious state duration (in secs)
+
+	enablePlayerAddRespawn = 1;
+
+	corpseManagerMode = 0;
+	wreckManagerMode = 0;
+	
+	// AI & debug
+	disabledAI = 1;  // <!-- Where 0 Fills empty playable slots with AI, 1 is They Don't fill the empty slots
+	enableDebugConsole = 1;		// <!-- Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) DO NOT SET AS 2!
+	enableTargetDebug = 1;
+
+
+////////////////////////////////////////////////////////////////////////////////
+// INCLUDES 																  
+////////////////////////////////////////////////////////////////////////////////
+
+#include "script_component.hpp"
+#include "CfgRemoteExec.hpp"
+#include "sounds.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgUnitInsignia.hpp"
+
+#include "scripts\R3F\LOG\desc_include.h"
+
+
+////////////////////////////////////////////////////////////////////////////////
+// dive mate  									  							 
+////////////////////////////////////////////////////////////////////////////////
+
+// #include "trindisplay\dialog\define.hpp"
+
+////////////////////////////////////////////////////////////////////////////////
+// RESOURCES
+////////////////////////////////////////////////////////////////////////////////
+
+	class RscPicturePerso
+		{
+				idc = -1;
+				type = CT_STATIC;
+				style = ST_PICTURE;
+				font = PuristaSemibold;
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,1};
+				sizeEx = 0.02;
+		};
+
+	class RscTypePerso
+		{
+				idd = -1;
+				movingEnable = 0;
+				duration = 1;
+				fadeIn = 2;
+				fadeOut = 2;
+		};
+
+	class Text
+		{
+			type=0;
+			idc=-1;
+			style=2 + 512;
+			lineSpacing=1.000000;
+			h=0.040000;
+			colorBackground[]={0,0,0,0};
+			colorText[]={0.50000,0.50000,0.50000,0.750000};
+			font= PuristaMedium;
+			sizeEx=0.07;
+		};
+
+	class MainTitle: Text
+		{
+			style = 16 + 0 + 512 + 2;
+			lineSpacing = 1.0;
+			x = 0;
+			y = 0.28;
+			w = 1.0;
+			h = 0.4;
+			colorText[] = {1, 1, 1, 1.0};
+			font = PuristaBold;
+			sizeEx=0.17;
+		};
+
+	class expTitle: Text
+		{
+			style = 16 + 0 + 512 + 2;
+			lineSpacing = 1.0;
+			x = 0.33;
+			y = 0.30;
+			w = 1.0;
+			h = 0.4;
+			colorText[] = {1, 1, 1, 1.0};
+			font = PuristaBold;
+			sizeEx=0.05;
+		};
+
+	class SubTitle: Text
+		{
+			style = 16 + 0 + 512 + 2;
+			lineSpacing = 1.0;
+			x = 0;
+			y = 0.52;
+			w = 1.0;
+			h = 0.4;
+			colorText[] = {1.0, 1.0, 1.0, 1.0};
+			font = PuristaBold;
+			sizeEx=0.1;
+		};
+
+	class RscTitles
+		{
+	// #include "trindisplay\dialog\trin_display.hpp"
+	// TPW HUD
+
+		class TPW_HUD_TXT
+			{
+			type = 13;
+			idc = -1;
+			style=0x00;
+			colorbackground[] = {0,0,0,0};
+			colortext[] = {0,1,0,0.5};
+			size = "0.03 / (getResolution select 5)";
+			h = 0.5;
+			w = 0.5;
+			text = "";
+			class Attributes
+				{
+				font = PuristaSemibold;
+				color = "#000000";
+				align = "left";
+				valign = "middle";
+				shadow = false;
+				shadowColor = "#ff0000";
+				size = "1";
+				};
+			};
+
+		class TPW_HUD_DIALOG
+			{
+			onLoad = "uiNamespace setVariable ['TPW_HUD_DISPLAY', _this select 0];";
+			idd = -1;
+			movingenable = 0;
+			enablesimulation = 1;
+			controlsbackground[] = {};
+			access = 0;
+			duration = 1e+1000;
+			fadeIn = 0;
+			fadeOut = 0;
+			objects[] = {};
+			controls[] =
+				{
+				TPW_HUD_TXT_1,
+				TPW_HUD_TXT_2,
+				TPW_HUD_TXT_3,
+				TPW_HUD_TXT_4,
+				TPW_HUD_TXT_5,
+				TPW_HUD_TXT_6,
+				TPW_HUD_TXT_7,
+				TPW_HUD_TXT_8,
+				TPW_HUD_TXT_9
+				};
+
+			class TPW_HUD_TXT_1 : TPW_HUD_TXT
+				{
+				idc = 100001;
+				x = 0.38 * safezoneW + safezoneX;
+				y = 0.4 * safezoneW + safezoneX;
+				text = "";
+				};
+
+			class TPW_HUD_TXT_2 : TPW_HUD_TXT
+				{
+				idc = 100002;
+				x = 0.48 * safezoneW + safezoneX;
+				y = 0.4 * safezoneW + safezoneX;
+				text = "";
+				};
+
+			class TPW_HUD_TXT_3 : TPW_HUD_TXT
+				{
+				idc = 100003;
+				x = 0.58 * safezoneW + safezoneX;
+				y = 0.4 * safezoneW + safezoneX;
+				text = "";
+				};
+
+			class TPW_HUD_TXT_4 : TPW_HUD_TXT
+				{
+				idc = 100004;
+				x = 0.38 * safezoneW + safezoneX;
+				y = 0.5 * safezoneW + safezoneX;
+				text = "";
+				};
+
+			class TPW_HUD_TXT_5 : TPW_HUD_TXT
+				{
+				idc = 100005;
+				x = 0.48 * safezoneW + safezoneX;
+				y = 0.5 * safezoneW + safezoneX;
+				text = "";
+				};
+
+			class TPW_HUD_TXT_6 : TPW_HUD_TXT
+				{
+				idc = 100006;
+				x = 0.58 * safezoneW + safezoneX;
+				y = 0.5 * safezoneW + safezoneX;
+				text = "";
+				};
+
+			class TPW_HUD_TXT_7 : TPW_HUD_TXT
+				{
+				idc = 100007;
+				x = 0.38 * safezoneW + safezoneX;
+				y = 0.6 * safezoneW + safezoneX;
+				text = "";
+				};
+			class TPW_HUD_TXT_8 : TPW_HUD_TXT
+				{
+				idc = 100008;
+				x = 0.48 * safezoneW + safezoneX;
+				y = 0.6 * safezoneW + safezoneX;
+				text = "";
+				};
+			class TPW_HUD_TXT_9 : TPW_HUD_TXT
+				{
+				idc = 100009;
+				x = 0.58 * safezoneW + safezoneX;
+				y = 0.6 * safezoneW + safezoneX;
+				text = "";
+				};
+			};
+	};

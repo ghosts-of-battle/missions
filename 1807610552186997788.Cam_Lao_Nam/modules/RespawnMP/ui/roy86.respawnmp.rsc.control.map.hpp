@@ -1,0 +1,22 @@
+class RscControlRespawnMPMap: Rsc86MapControl {
+    idc = ASSIGNED_IDC_200;
+	x = "5.05 * (((safezoneW / safezoneH) min 1.2) / 40) + safeZoneX + (uiNamespace getVariable [""Roy86_IGUI_AmrelTablet_X"",0])";
+	y = "5.35 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safeZoneY + (uiNamespace getVariable [""Roy86_IGUI_AmrelTablet_Y"",0])";
+	w = "38.4 * (((safezoneW / safezoneH) min 1.2) / 40)";
+	h = "26.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+	scaleMin = "uinamespace getvariable ['RscDisplayStrategicMap_scaleMin',0.21]";
+	scaleMax = "uinamespace getvariable ['RscDisplayStrategicMap_scaleMax',0.4]";
+	scaleDefault = "uinamespace getvariable ['RscDisplayStrategicMap_scaleDefault',0.3]";
+	ptsPerSquareSea = 5;
+	ptsPerSquareTxt = 20; //ptsPerSquareTxt = 20;
+	ptsPerSquareCLn = 10; //ptsPerSquareCLn = 10;
+	ptsPerSquareExp = 10; //ptsPerSquareExp = 10;
+	ptsPerSquareCost = 10; //ptsPerSquareCost = 10;
+	ptsPerSquareFor = 9; //ptsPerSquareFor = 9;
+	ptsPerSquareForEdge = 9; //ptsPerSquareForEdge = 9;
+	ptsPerSquareRoad = 6; //ptsPerSquareRoad = 6;
+	ptsPerSquareObj = 9; //ptsPerSquareObj = 9;
+	alphaFadeStartScale = 0;
+	alphaFadeEndScale = 0;
+	drawObjects = 0;
+};

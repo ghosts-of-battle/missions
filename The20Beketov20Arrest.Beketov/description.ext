@@ -1,0 +1,14 @@
+author			= "Darylsteak";
+onLoadName		= "The Beketov Arrest";
+onLoadMission	= "I got a feeling that we aint gonna have enough people, but dont worry I got a backup mission set up";
+loadScreen		= "";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 41;	// maximum number of players the mission supports
+};
+
+respawnOnStart = -1;
+enableDebugConsole = 1;

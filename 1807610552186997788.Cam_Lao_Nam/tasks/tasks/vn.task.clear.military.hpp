@@ -1,0 +1,165 @@
+/*
+    Author: RoyEightySix (https://www.roy86.com.au)
+    Date: 2020-02-10
+    
+    Description:
+        No description added yet.
+    
+    Parameter(s):
+        _localVariable - Description [DATATYPE, defaults to DEFAULTVALUE]
+    
+    Returns:
+        Function reached the end [BOOL]
+*/
+class VN_Task_Clear_Outpost {
+	scope = 1;
+	target = -1;
+	typeID = 21;
+	minIntelScore = 5;
+
+	areaSize[] = {1000,1000};
+	positionSearchRadius = 3000;
+	positionSearchTypes[] = {"military"};
+	positionIsWater = 0;
+
+	class TaskDetails {
+		title = "Attack %7 FOB";
+		description[] = {
+			"<t>Ref: %1</t> | <t>Date: %2<br/>AO: %3 %4 near %5</t>"
+			,"<t size='1.1' color='#FFC600'>Brief:</t> <t>%7 squads have fortified a position near %5 and are conducting attacks on our supply lines causing significant impacts forcing back our forces.</t>"
+			,"<t size='1.1' color='#FFC600'>Action:</t> <t>%6 forces will move to the area to conduct an assault on the outpost to eliminate the operating squads in that area.</t>"
+			,"<t size='1.1' color='#FFC600'>Enemy:</t> <t>%7 forces are heavy with a likelyhood of additional squads operating in that area with small arms and possibly an additional heavy vehicles. They are likely to call in support when engaged so move quickly.</t>"
+		};
+		iconType = "default";
+		iconPosition = "positionOffset";
+		textArguments[] = {"randomCode","datetime","worldRegion","worldName","nearestTown","factionBLUshort","factionOPFshort"};
+	};
+	
+	class Markers {
+		class marker_A {
+			shape = "RECTANGLE";
+			brush = "SolidBorder";
+			colour = "ColorOpfor";
+			position = "positionOffset";
+			size[] = {0.99,0.99};
+			alpha = 0.2;
+		};
+		class marker_B: marker_A {
+			brush = "Border";
+			size[] = {1.2,1.2};
+			alpha = 1;
+		};
+		class marker_C: marker_A {
+			brush = "Border";
+			size[] = {1.0,1.0};
+			alpha = 1;
+		};
+		class marker_D: marker_A {
+			brush = "FDiagonal";
+			size[] = {1.2,0.1};
+			alpha = 0.9;
+			direction = 0;
+			distance = 1.1;
+		};
+		class marker_E: marker_D {
+			direction = 180;
+		};
+		class marker_F: marker_D {
+			size[] = {1.0,0.1};
+			direction = 90;
+			angle = 90;
+		};
+		class marker_G: marker_F {
+			direction = 270;
+		};
+		class marker_H {
+			position = "positionOffset";
+			shape = "ICON";
+			type = "mil_objective";
+			colour = "ColorOpfor";
+			size[] = {2,2};
+			alpha = 0.7;
+		};
+	};
+	class Groups {
+		class TargetGroup_1 {
+			probability = 1;
+			isTarget = 1;
+			position = "positionOffset";
+			faction = "FactionTypeOPF";
+			groupTypes[] = {"SquadAmbushINS4","SquadAmbushINS8"};
+			radius[] = {50,150};
+			isDefending = 1;
+			occupyBuildings = 1;
+			dropIntel = 1;
+		};
+		class TargetGroup_2: TargetGroup_1 {
+			minPlayers = 2;
+			distance[] = {100,150};
+			radius[] = {150,200};
+		};
+		class TargetGroup_3: TargetGroup_1 {
+			minPlayers = 6;
+			distance[] = {150,200};
+			radius[] = {200,250};
+		};
+		class EN_Group_1 {
+			probability = 1;
+			position = "positionOffset";
+			faction = "FactionTypeOPF";
+			groupTypes[] = {"SquadAmbushINS4","SquadAmbushINS8"};
+			isPatrolling = 0.9;
+			radius[] = {50,150};
+			isDefending = 1;
+			occupyBuildings = 1;
+			dropIntel = 1;
+		};
+		class EN_Group_2: EN_Group_1 {
+			minPlayers = 2;
+			distance[] = {100,150};
+			radius[] = {150,200};
+		};
+		class EN_Group_3: EN_Group_1 {
+			minPlayers = 6;
+			distance[] = {150,200};
+			radius[] = {200,250};
+		};
+		class EN_Vehicle_Group_1 {
+			probability = 0.85;
+			position = "positionOffset";
+			distance[] = {50,100};
+			direction[] = {0,360};
+			faction = "FactionTypeOPF";
+			vehicleTypes[] = {"CarTurret_INS","Car_INS"};
+			createCrew = 1;
+			isPatrolling = 0.6;
+			radius[] = {150,250};
+		};
+		class EN_Vehicle_Group_2: EN_Vehicle_Group_1 {
+			probability = 0.7;
+			minPlayers = 8;
+			radius[] = {200,350};
+			vehicleTypes[] = {"CarTurret_INS"};
+		};
+		class EN_Vehicle_Group_3: EN_Vehicle_Group_1 {
+			probability = 0.7;
+			minPlayers = 16;
+			radius[] = {200,350};
+			vehicleTypes[] = {"Armour_APC"};
+		};
+		class EN_Vehicle_Group_4: EN_Vehicle_Group_1 {
+			probability = 0.5;
+			minPlayers = 8;
+			isTarget = 1;
+			isPatrolling = 0;
+			isDefending = 1;
+			vehicleTypes[] = {"Armour_APC","Armour_MBT"};
+		};
+	};
+	class Objective {
+		class Succeeded {
+			state = 1; // 0:Created, 1:Succeeded, 2: Failed, 3: Canceled
+			condition = "_targetsKilled";
+		};
+	};
+};

@@ -1,0 +1,422 @@
+// ============================================================================================
+
+// F3 - Mission Header
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+
+// F3 - Debug Console
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+enableDebugConsole = 1;
+
+// ============================================================================================
+
+// F3 - Respawn Settings
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+respawn = 1;
+respawndelay = 3;
+respawnOnStart = 0;
+respawnTemplates[] = {"Seagull","f_spectator"};
+
+// ============================================================================================
+
+
+// F3 - Start of Notifications block.
+
+class cfgNotifications
+{
+
+	// A generic warning notification
+	class Alert
+	{
+		title = "ALERT";
+		description = "%1";
+		iconPicture="\A3\ui_f\data\map\markers\military\warning_ca.paa";
+		duration = 3;
+		priority = 9;
+	};
+
+	// Notifications for the F3 Safe Start Component
+	class SafeStart
+	{
+		title = "SAFE START";
+		description = "%1";
+		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		duration = 10;
+		priority = 0;
+	};
+	class SafeStartMissionStarting
+	{
+		title = "SAFE START";
+		description = "%1";
+		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		duration = 3;
+		priority = 1;
+	};
+
+	// Notification for the F3 Mapclick Teleport component
+	class MapClickTeleport {
+		title= "NOTE";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
+		duration = 3;
+		priority = 5;
+	};
+
+};
+
+// ============================================================================================
+
+// F3 - Start of Params code blocks.
+// WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
+
+class Params
+{
+
+// ============================================================================================
+
+// F3 - Debug Mode
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// WARNING: DO NOT DISABLE THIS COMPONENT
+
+    class f_param_debugMode
+    {
+            title = "Debug Mode";
+            values[] = {0,1};
+            texts[] = {"Off","On"};
+            default = 0;
+    };
+
+// ============================================================================================
+
+// F3 - Folk Assign Gear Script
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+    class f_param_backpacks
+    {
+            title = "Loadouts";
+            values[] = {0,1,2};
+            texts[] = {"Light","Medium","Heavy"};
+            default = 1;
+    };
+
+// ============================================================================================
+
+// F3 - Mission Timer/Safe Start
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
+
+    class f_param_mission_timer
+    {
+            title = "Safe Start (mins)";
+            values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
+            texts[] = {"Off","1","2","3","4","5","6","7","8","9","10","15"};
+            default = 0;
+    };
+
+// ============================================================================================
+
+// F3 - Mission Conditions Selector
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+	
+	class f_param_weather
+	{
+		title = "Weather";
+		values[] = {0,1,2,3,4,5,6,7,8};
+		texts[] = {"Clear (Calm)","Clear (Light Winds)","Clear (Strong Winds)","vercast (Calm)","Overcast (Light Winds)","Overcast (Strong Winds)","Rain (Light Winds)","Rain (Strong Winds)","Storm"};
+		default = 0;
+		function = "f_fnc_setWeather";		// This function is called to apply the values
+		isGlobal = 0;						// Execute this only on the server
+	};
+
+	class f_param_fog
+	{
+		title = "Fog";
+		values[] = {0,1,2};
+		texts[] = {"None","Light","Heavy"};
+		default = 0;
+		function = "f_fnc_SetFog";			// This function is called to apply the values
+		isGlobal = 0;						// Execute this only on the server
+	};
+
+    class f_param_timeOfDay
+	{
+		title = "Time of Day";
+		values[] = {0,1,2,3,4,5,6,7};
+		texts[] = {"Dawn      ","Early Morning","Morning","Noon","Afternoon","Evening","Dusk","Night"};
+		default = 4;
+		function = "f_fnc_setTime";			// This function is called to apply the values
+ 		isGlobal = 1;						// Execute this only on the server
+	};
+
+// ============================================================================================
+
+// F3 - AI Skill Selector
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+/*
+	class f_param_AISkill_BLUFOR
+	{
+		title = "AI Skill (BLUFOR)";
+		values[] = {0,1,2,3};
+		texts[] = {"Super","High","Medium","Low"};
+		default = 1;
+	};
+*/
+
+/*
+	class f_param_AISkill_OPFOR
+	{
+		title = "AI Skill (OPFOR)";
+		values[] = {0,1,2,3};
+		texts[] = {"Super","High","Medium","Low"};
+		default = 1;
+	};
+*/
+
+/*
+	class f_param_AISkill_INDP
+	{
+		title = "AI Skill (INDEPENDENT)";
+		values[] = {0,1,2,3};
+		texts[] = {"Super","High","Medium","Low"};
+		default = 1;
+	};
+*/
+
+// ============================================================================================
+
+// F3 - Caching
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+	class f_param_caching
+	{
+		title = "Cache AI outside distance (m)";
+		values[] = {0,600,800,1000,1500,2000};
+		default = 0;
+	};
+
+// ============================================================================================
+
+// F3 - End of Params code blocks.
+// WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
+
+};
+
+// ============================================================================================
+
+// F3 - Briefing Template
+// Credits: BIS - Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Ending #1";
+		subtitle = "";
+		description = "*** Insert debriefing #1 here. ***";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2
+	{
+		title = "Ending #2";
+		subtitle = "";
+		description = "*** Insert debriefing #2 here. ***";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End3
+	{
+		title = "Ending #3";
+		subtitle = "";
+		description = "*** Insert debriefing #3 here. ***";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End4
+	{
+		title = "Ending #4";
+		subtitle = "";
+		description = "*** Insert debriefing #4 here. ***";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End5
+	{
+		title = "Ending #5";
+		subtitle = "";
+		description = "*** Insert debriefing #5 here. ***";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End6
+	{
+		title = "Ending #6";
+		subtitle = "";
+		description = "*** Insert debriefing #6 here. ***";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+};
+
+// ============================================================================================
+
+// F3 - Respawn Templates
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class CfgRespawnTemplates
+{
+	// F3 Spectator Script
+	class f_Spectator
+	{
+		onPlayerRespawn = "f_fnc_CamInit";
+	};
+  	//Overwrite Vanilla Seagull
+    class Seagull
+    {
+        onPlayerRespawn = "";
+    };
+};
+
+// ============================================================================================
+
+// F3 - Menu components
+// DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
+
+// Menu components for the Spectator Script
+#include "f\spect\config.hpp"
+
+// ============================================================================================
+
+// F3 - Functions
+// DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
+
+class CfgFunctions
+{
+	class F // Defines the "owner"
+	{
+		class common // category
+		{
+			file = "f\common";
+			// Defines the function to preInit (the paramArray dosent seem to be constructed at preInit stage).
+			class processParamsArray
+			{
+				preInit = 1;
+				postInit = 1;
+			};
+
+			class nearPlayer{};
+		};
+		class mpEnd
+		{
+			file = "f\mpEnd";
+			class mpEnd{};
+			class mpEndReceiver{};
+		};
+		class assignGear
+		{
+			// Defines the functions to preInit the compling of the assignGear function used by units.
+			file = "f\assignGear";
+			class assignGear{};
+		};
+		class groupMarkers {
+			file = "f\groupMarkers";
+			class addGroupMarker{};
+			class drawGroupMarkers{};
+            class drawGroupMarkerRec{};
+			class getGroupMarkerStyle{};
+            class updateGroupMarkers{};
+			class setupGroupMarkers{};
+		};
+		class missionConditions
+		{
+			file = "f\missionConditions";
+			class SetTime{};
+			class SetFog{};
+			class SetWeather{};
+		};
+		class cache
+		{
+			file = "f\cache";
+			class cInit {};
+			class cTracker {};
+			class gCache {};
+			class gUncache {};
+		};
+		class bodyRemoval
+		{
+			file = "f\removeBody";
+			class removeBody{};
+		};
+		class setAISkill
+		{
+			file = "f\setAISKill";
+			class setAISKill{};
+		};
+		class mapClickTeleport
+		{
+			file = "f\mapClickTeleport";
+			class mapClickTeleportUnit{};
+			class mapClickTeleportGroup{};
+		};
+		class preMount
+		{
+			file = "f\preMount";
+			class mountGroups{};
+		};
+		class zeus
+		{
+			file = "f\zeus";
+			class zeusInit{};
+			class zeusAddAddons{};
+			class zeusAddObjects{};
+		};
+        class safeStart
+		{
+			file = "f\safeStart";
+			class safety{};
+		};
+		#include "f\spect\functions.hpp"
+        #include "f\respawn\functions.hpp"
+	};
+};
+
+
+// ============================================================================================
+
+// F3 - Custom Insignia
+
+class CfgUnitInsignia {
+	#include "f\assignGear\insignia\define.hpp"
+};
+
+#include "f\respawn\defines.hpp"
+#include "f\respawn\dialogs.hpp"
+
+// ACE3 - Finger pointing
+
+class ACE_settings {
+	class ace_finger_enabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_finger_maxRange {
+		value = 5;
+		typeName = "SCALAR";
+		force = 1;
+	};
+};

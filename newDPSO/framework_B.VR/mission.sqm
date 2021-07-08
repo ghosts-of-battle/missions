@@ -1,0 +1,1914 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=721;
+	};
+	class MarkerIDProvider
+	{
+		nextID=2;
+	};
+	class Camera
+	{
+		pos[]={4241.0054,137.92905,3133.0295};
+		dir[]={-0.59229881,-0.3749575,0.71316499};
+		up[]={-0.23957027,0.92703432,0.28845704};
+		aside[]={0.76928896,1.0810618e-007,0.63891155};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"ace_explosives"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=2;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+	};
+};
+randomSeed=11175528;
+class ScenarioData
+{
+	author="YonV";
+};
+class Intro
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="DPSO F3";
+		overviewText="*** Insert mission description here. ***";
+		resistanceWest=0;
+		startWeather=0.84999996;
+		startWind=0;
+		forecastWeather=0.84999996;
+		forecastWind=0;
+		forecastWaves=0;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=8;
+		minute=15;
+		startFogDecay=0;
+		forecastFogDecay=0;
+	};
+	class Entities
+	{
+		items=21;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4078.2212,5.0014391,3365.541};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="GrpFIA_CO = group this; [""co"",this] call f_fnc_assignGear;";
+						name="UnitFIA_CO";
+						description="FIA Commander";
+						isPlayable=1;
+					};
+					id=618;
+					type="B_G_officer_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4083.2212,5.0014391,3360.5908};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_CO = group this; [""m"",this] call f_fnc_assignGear;";
+						name="UnitFIA_CO_M";
+						description="FIA Medic";
+						isPlayable=1;
+					};
+					id=619;
+					type="B_G_medic_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4073.2212,5.0014391,3360.5908};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_CO = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVM ""f\chargeUAV\f_chargeUAVaction.sqf"";";
+						name="UnitFIA_CO_UAV";
+						description="FIA UAV Operator";
+						isPlayable=1;
+					};
+					id=620;
+					type="B_G_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4088.2212,5.0014391,3355.5908};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_CO = group this; [""vd"",this] call f_fnc_assignGear;";
+						name="UnitFIA_CO_D";
+						description="FIA Driver (Repair)";
+						isPlayable=1;
+					};
+					id=621;
+					type="B_G_engineer_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4068.2212,5.0014391,3355.5908};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_CO = group this; [""fac"",this] call f_fnc_assignGear;";
+						name="UnitFIA_CO_FAC";
+						description="FIA FAC";
+						isPlayable=1;
+					};
+					id=622;
+					type="B_G_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=617;
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4077.0923,5.0014391,3347.3682};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpFIA_SGT = group this; [""dc"",this] call f_fnc_assignGear;";
+						name="UnitFIA_SGT";
+						description="FIA Platoon SGT";
+						isPlayable=1;
+					};
+					id=624;
+					type="B_G_officer_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4082.0923,5.0014391,3342.418};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_SGT = group this; [""m"",this] call f_fnc_assignGear;";
+						name="UnitFIA_SGT_M";
+						description="FIA Medic";
+						isPlayable=1;
+					};
+					id=625;
+					type="B_G_medic_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4072.0923,5.0014391,3342.418};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_SGT = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVM ""f\chargeUAV\f_chargeUAVaction.sqf"";";
+						name="UnitFIA_SGT_UAV";
+						description="FIA UAV Operator";
+						isPlayable=1;
+					};
+					id=626;
+					type="B_G_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4087.0923,5.0014391,3337.418};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_SGT = group this; [""vd"",this] call f_fnc_assignGear;";
+						name="UnitFIA_SGT_D";
+						description="FIA Driver (Repair)";
+						isPlayable=1;
+					};
+					id=627;
+					type="B_G_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=623;
+		};
+		class Item2
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4101.0747,5.0014391,3365.0498};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpFIA_ASL = group this; [""dc"",this] call f_fnc_assignGear;";
+						name="UnitFIA_ASL_SL";
+						description="FIA Alpha Squad Leader";
+						isPlayable=1;
+					};
+					id=629;
+					type="B_G_Soldier_SL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4106.0747,5.0014391,3360.0996};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_ASL = group this; [""m"",this] call f_fnc_assignGear;";
+						name="UnitFIA_ASL_M";
+						description="FIA Alpha Medic";
+						isPlayable=1;
+					};
+					id=630;
+					type="B_G_medic_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=628;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4101.0435,5.0014391,3349.7363};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_A1 = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A1_FTL";
+						description="FIA Alpha 1 Fireteam Leader";
+						isPlayable=1;
+					};
+					id=632;
+					type="B_G_Soldier_TL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4106.0435,5.0014391,3344.7861};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A1_AR";
+						description="FIA Alpha 1 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=633;
+					type="B_G_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4096.0435,5.0014391,3344.7861};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A1 = group this; [""aar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A1_AAR";
+						description="FIA Alpha 1 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=634;
+					type="B_G_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4111.0435,5.0014391,3339.7861};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A1 = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A1_AT";
+						description="FIA Alpha 1 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=635;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4091.0435,5.0014391,3339.7861};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A1 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A1_R1";
+						description="FIA Alpha 1 Rifleman";
+						isPlayable=1;
+					};
+					id=636;
+					type="B_G_Soldier_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4116.0435,5.0014391,3334.7861};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A1 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A1_R2";
+						description="FIA Alpha 1 Rifleman";
+						isPlayable=1;
+					};
+					id=637;
+					type="B_G_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=631;
+		};
+		class Item4
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4100.8364,5.0014391,3333.9707};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_A2 = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A2_FTL";
+						description="FIA Alpha 2 Fireteam Leader";
+						isPlayable=1;
+					};
+					id=639;
+					type="B_G_Soldier_TL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4105.8364,5.0014391,3329.0205};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A2_AR";
+						description="FIA Alpha 2 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=640;
+					type="B_G_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4095.8364,5.0014391,3329.0205};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A2 = group this; [""aar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A2_AAR";
+						description="FIA Alpha 2 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=641;
+					type="B_G_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4110.8364,5.0014391,3324.0205};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A2 = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A2_AT";
+						description="FIA Alpha 2 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=642;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4090.8364,5.0014391,3324.0205};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A2 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A2_R1";
+						description="FIA Alpha 2 Rifleman";
+						isPlayable=1;
+					};
+					id=643;
+					type="B_G_Soldier_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4115.8364,5.0014391,3319.0205};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_A2 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_A2_R2";
+						description="FIA Alpha 2 Rifleman";
+						isPlayable=1;
+					};
+					id=644;
+					type="B_G_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=638;
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4125.0122,5.0014391,3364.6387};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpFIA_BSL = group this; [""dc"",this] call f_fnc_assignGear;";
+						name="UnitFIA_BSL_SL";
+						description="FIA Bravo Squad Leader";
+						isPlayable=1;
+					};
+					id=646;
+					type="B_G_Soldier_SL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4130.0122,5.0014391,3359.6885};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_BSL = group this; [""m"",this] call f_fnc_assignGear;";
+						name="UnitFIA_BSL_M";
+						description="FIA Bravo Medic";
+						isPlayable=1;
+					};
+					id=647;
+					type="B_G_medic_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=645;
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4125.188,5.0014391,3349.1348};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_B1 = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B1_FTL";
+						description="FIA Bravo 1 Fireteam Leader";
+						isPlayable=1;
+					};
+					id=649;
+					type="B_G_Soldier_TL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4130.188,5.0014391,3344.1846};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B1_AR";
+						description="FIA Bravo 1 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=650;
+					type="B_G_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4120.188,5.0014391,3344.1846};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B1 = group this; [""aar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B1_AAR";
+						description="FIA Bravo 1 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=651;
+					type="B_G_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4135.188,5.0014391,3339.1846};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B1 = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B1_AT";
+						description="FIA Bravo 1 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=652;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4115.188,5.0014391,3339.1846};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B1 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B1_R1";
+						description="FIA Bravo 1 Rifleman";
+						isPlayable=1;
+					};
+					id=653;
+					type="B_G_Soldier_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4140.188,5.0014391,3334.1846};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B1 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B1_R2";
+						description="FIA Bravo 1 Rifleman";
+						isPlayable=1;
+					};
+					id=654;
+					type="B_G_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=648;
+		};
+		class Item7
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4124.5981,5.0014391,3333.3691};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_B2 = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B2_FTL";
+						description="FIA Bravo 2 Fireteam Leader";
+						isPlayable=1;
+					};
+					id=656;
+					type="B_G_Soldier_TL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4129.5981,5.0014391,3328.4189};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B2_AR";
+						description="FIA Bravo 2 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=657;
+					type="B_G_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4119.5981,5.0014391,3328.4189};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B2 = group this; [""aar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B2_AAR";
+						description="FIA Bravo 2 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=658;
+					type="B_G_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4134.5981,5.0014391,3323.4189};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B2 = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B2_AT";
+						description="FIA Bravo 2 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=659;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4114.5981,5.0014391,3323.4189};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B2 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B2_R1";
+						description="FIA Bravo 2 Rifleman";
+						isPlayable=1;
+					};
+					id=660;
+					type="B_G_Soldier_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4139.5981,5.0014391,3318.4189};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_B2 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_B2_R2";
+						description="FIA Bravo 2 Rifleman";
+						isPlayable=1;
+					};
+					id=661;
+					type="B_G_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=655;
+		};
+		class Item8
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4151.6138,5.0014391,3364.0605};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpFIA_CSL = group this; [""dc"",this] call f_fnc_assignGear;";
+						name="UnitFIA_CSL_SL";
+						description="FIA Charlie Squad Leader";
+						isPlayable=1;
+					};
+					id=663;
+					type="B_G_Soldier_SL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4156.6138,5.0014391,3359.1104};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_CSL = group this; [""m"",this] call f_fnc_assignGear;";
+						name="UnitFIA_CSL_M";
+						description="FIA Charlie Medic";
+						isPlayable=1;
+					};
+					id=664;
+					type="B_G_medic_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=662;
+		};
+		class Item9
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4151.8872,5.0014391,3348.4199};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_C1 = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C1_FTL";
+						description="FIA Charlie 1 Fireteam Leader";
+						isPlayable=1;
+					};
+					id=666;
+					type="B_G_Soldier_TL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4156.8872,5.0014391,3343.4697};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C1_AR";
+						description="FIA Charlie 1 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=667;
+					type="B_G_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4146.8872,5.0014391,3343.4697};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C1 = group this; [""aar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C1_AAR";
+						description="FIA Charlie 1 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=668;
+					type="B_G_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4161.8872,5.0014391,3338.4697};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C1 = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C1_AT";
+						description="FIA Charlie 1 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=669;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4141.8872,5.0014391,3338.4697};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C1 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C1_R1";
+						description="FIA Charlie 1 Rifleman";
+						isPlayable=1;
+					};
+					id=670;
+					type="B_G_Soldier_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4166.8872,5.0014391,3333.4697};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C1 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C1_R2";
+						description="FIA Charlie 1 Rifleman";
+						isPlayable=1;
+					};
+					id=671;
+					type="B_G_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=665;
+		};
+		class Item10
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4151.5044,5.0014391,3332.4736};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_C2 = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C2_FTL";
+						description="FIA Charlie 2 Fireteam Leader";
+						isPlayable=1;
+					};
+					id=673;
+					type="B_G_Soldier_TL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4156.5044,5.0014391,3327.5234};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C2_AR";
+						description="FIA Charlie 2 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=674;
+					type="B_G_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4146.5044,5.0014391,3327.5234};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C2 = group this; [""aar"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C2_AAR";
+						description="FIA Charlie 2 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=675;
+					type="B_G_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4161.5044,5.0014391,3322.5234};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C2 = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C2_AT";
+						description="FIA Charlie 2 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=676;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4141.5044,5.0014391,3322.5234};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C2 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C2_R1";
+						description="FIA Charlie 2 Rifleman";
+						isPlayable=1;
+					};
+					id=677;
+					type="B_G_Soldier_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4166.5044,5.0014391,3317.5234};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_C2 = group this; [""r"",this] call f_fnc_assignGear;";
+						name="UnitFIA_C2_R2";
+						description="FIA Charlie 2 Rifleman";
+						isPlayable=1;
+					};
+					id=678;
+					type="B_G_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=672;
+		};
+		class Item11
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4178.4468,5.0014391,3363.9609};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_MMG1 = group this; [""mmgag"",this] call f_fnc_assignGear;      ";
+						name="UnitFIA_MMG1_AG";
+						description="FIA Medium MG Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=680;
+					type="B_G_Soldier_A_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4183.4468,5.0014391,3359.0107};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_MMG1 = group this; [""mmgg"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MMG1_G";
+						description="FIA Medium MG Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=681;
+					type="B_G_Soldier_AR_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=679;
+		};
+		class Item12
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4178.8452,5.0014391,3353.3887};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_HMG1 = group this; [""hmgag"",this] call f_fnc_assignGear;      ";
+						name="UnitFIA_HMG1_AG";
+						description="FIA Heavy MG Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=683;
+					type="B_G_Soldier_A_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4183.8452,5.0014391,3348.4385};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_HMG1 = group this; [""hmgg"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_HMG1_G";
+						description="FIA Heavy MG Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=684;
+					type="B_G_Soldier_AR_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=682;
+		};
+		class Item13
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4178.7583,5.0014391,3341.4063};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_MAT1 = group this; [""matag"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MAT1_AG";
+						description="FIA Medium AT Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=686;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4183.7583,5.0014391,3336.4561};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						health=0.99000001;
+						skill=0.60000002;
+						init="GrpFIA_MAT1 = group this; [""matg"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MAT1_G";
+						description="FIA Medium AT Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=687;
+					type="B_G_Soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=685;
+		};
+		class Item14
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4178.8931,5.0014391,3329.2852};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_HAT1 = group this; [""hatag"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_HAT1_AG";
+						description="FIA Heavy AT Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=689;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4183.8931,5.0014391,3324.335};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						health=0.99000001;
+						skill=0.60000002;
+						init="GrpFIA_HAT1 = group this; [""hatg"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_HAT1_G";
+						description="FIA Heavy AT Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=690;
+					type="B_G_Soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=688;
+		};
+		class Item15
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4178.895,5.0014391,3317.5166};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_MTR1 = group this; [""mtrag"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MTR1_AG";
+						description="FIA Mortar Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=692;
+					type="B_G_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4183.895,5.0014391,3312.5664};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						health=0.99000001;
+						skill=0.60000002;
+						init="GrpFIA_MTR1 = group this; [""mtrg"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MTR1_G";
+						description="FIA Mortar Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=693;
+					type="B_G_Soldier_A_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=691;
+		};
+		class Item16
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4178.894,5.0014391,3304.999};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_MSAM1 = group this; [""msamag"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MSAM1_AG";
+						description="FIA Medium SAM Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=695;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4183.894,5.0014391,3300.0488};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						health=0.99000001;
+						skill=0.60000002;
+						init="GrpFIA_MSAM1 = group this; [""msamg"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MSAM1_G";
+						description="FIA Medium SAM Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=696;
+					type="B_G_Soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=694;
+		};
+		class Item17
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4178.7935,5.0014391,3292.2246};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_HSAM1 = group this; [""hsamag"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_HSAM1_AG";
+						description="FIA Heavy SAM Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=698;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4183.7935,5.0014391,3287.2744};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						health=0.99000001;
+						skill=0.60000002;
+						init="GrpFIA_HSAM1 = group this; [""hsamg"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_HSAM1_G";
+						description="FIA Heavy SAM Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=699;
+					type="B_G_Soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=697;
+		};
+		class Item18
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4178.6665,5.0014391,3281.3193};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_ST1 = group this; [""sp"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_ST1_SP";
+						description="FIA Sniper Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=701;
+					type="B_G_Soldier_M_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4183.6665,5.0014391,3276.3691};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						health=0.99000001;
+						skill=0.60000002;
+						init="GrpFIA_ST1 = group this; [""sn"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_ST1_G";
+						description="FIA Sniper Team 1 Sniper";
+						isPlayable=1;
+					};
+					id=702;
+					type="B_G_Soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=700;
+		};
+		class Item19
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4179.438,5.0014391,3268.9727};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpFIA_ENG1 = group this; [""eng"",this] call f_fnc_assignGear;";
+						name="UnitFIA_ENG1_FTL";
+						description="FIA Engineer Team 1 Leader (Demo)";
+						isPlayable=1;
+					};
+					id=704;
+					type="B_G_engineer_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4184.438,5.0014391,3264.0225};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_ENG1 = group this; [""eng"",this] call f_fnc_assignGear;";
+						name="UnitFIA_ENG1_A1";
+						description="FIA Engineer Team 1 Assistant (Demo)";
+						isPlayable=1;
+					};
+					id=705;
+					type="B_G_engineer_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4174.438,5.0014391,3264.0225};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_ENG1 = group this; [""engm"",this] call f_fnc_assignGear;";
+						name="UnitFIA_ENG1_A2";
+						description="FIA Engineer Team 1 Assistant (Mines)";
+						isPlayable=1;
+					};
+					id=706;
+					type="B_G_engineer_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4189.438,5.0014391,3259.0225};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpFIA_ENG1 = group this; [""engm"",this] call f_fnc_assignGear;";
+						name="UnitFIA_ENG1_A3";
+						description="FIA Engineer Team 1 Assistant (Mines)";
+						isPlayable=1;
+					};
+					id=707;
+					type="B_G_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=703;
+		};
+		class Item20
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4179.4126,5.0014391,3256.0508};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CAPTAIN";
+						init="GrpFIA_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehFIA_TH1;";
+						name="UnitFIA_TH1_P";
+						description="FIA Transport Helo 1 Pilot";
+						isPlayable=1;
+					};
+					id=709;
+					type="B_G_engineer_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4184.4126,5.0014391,3251.1006};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="GrpFIA_TH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehFIA_TH1,[0]];";
+						name="UnitFIA_TH1_CP";
+						description="FIA Transport Helo 1 Co-Pilot (Repair)";
+						isPlayable=1;
+					};
+					id=710;
+					type="B_G_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=708;
+		};
+	};
+};
+class OutroLoose
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroWin
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};

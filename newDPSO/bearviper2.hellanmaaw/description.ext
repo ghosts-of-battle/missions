@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////////////
+//---------------------DESCRIPTION.EXT----------------------------------------//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// GENERAL SETTINGS
+////////////////////////////////////////////////////////////////////////////////
+
+forceRotorLibSimulation = 0; // Enable/ disable AFM  0 - options based; 1 - force enable; 2 - force disable
+
+//disableChannels[] = {0,1,2,3,4,5,6};
+joinUnassigned = 1;		// <!-- Where 0 forces joining players into the first empty slot, 1 leaves them to select their own
+showGPS = 0;
+respawnOnStart = -1;
+
+// Respawn settings
+respawn = "BASE";
+respawnButton = 1;
+respawnDelay = 4;
+respawnDialog = 0;
+
+ReviveMode = 0;                         //0: disabled, 1: enabled, 2: controlled by player attributes
+ReviveUnconsciousStateMode = 0;         //0: basic, 1: advanced, 2: realistic
+ReviveRequiredTrait = 0;                //0: none, 1: medic trait is required
+ReviveRequiredItems = 1;                //0: none, 1: medkit, 2: medkit or first aid kit
+ReviveRequiredItemsFakConsumed = 1;     //0: first aid kit is not consumed upon revive, 1: first aid kit is consumed
+ReviveDelay = 60;                       //time needed to revive someone (in secs)
+ReviveMedicSpeedMultiplier = 4;         //speed multiplier for revive performed by medic
+ReviveForceRespawnDelay = 10;           //time needed to perform force respawn (in secs)
+ReviveBleedOutDelay = 180;              //unconscious state duration (in secs)
+
+enablePlayerAddRespawn = 1;
+
+corpseManagerMode = 0;
+wreckManagerMode = 0;
+
+// AI & debug
+disabledAI = 1;  // <!-- Where 0 Fills empty playable slots with AI, 1 is They Don't fill the empty slots
+enableDebugConsole = 1;		// <!-- Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) DO NOT SET AS 2!
+enableTargetDebug = 1;
+
+////////////////////////////////////////////////////////////////////////////////
+// INCLUDES 																  
+////////////////////////////////////////////////////////////////////////////////
+
+#include "script_component.hpp"
+#include "CfgRemoteExec.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgSounds.hpp"

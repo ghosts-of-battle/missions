@@ -1,0 +1,59 @@
+/*
+ * File: description.ext
+ * Project: v.Cam_Lao_Nam
+ * File Created: Tuesday, 6th July 2021 7:29:18 pm
+ * Author: YonV (yonv@gmail.com)
+ * -----
+ * Last Modified: Wednesday, 7th July 2021 5:23:31 pm
+ * Modified By: YonV (yonv@gmail.com>)
+ */
+/* -------------------------------------------------------------------------- */
+#include "script_component.hpp"
+respawnOnStart = 0;
+
+/************************************
+ * GENERAL SETTINGS ALL SET IN 3DEN *
+ ************************************/
+
+/* -------------------------------- INCLUDES -------------------------------- */
+#include "CfgRemoteExec.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgSounds.hpp"
+#include "CfgUnitInsignia.hpp"
+#include "CfgCommunicationMenu.hpp"
+
+/* ----------------------------------- SOG ---------------------------------- */
+#include "vn_whitelisted_arsenal_loadouts.hpp"
+#include "vn_logistics.hpp"
+
+/* ---------------------------- TAW View distance --------------------------- */
+#include "scripts\taw_vd\GUI.h"
+
+/* ---------------------------- addon free radio ---------------------------- */
+#include "scripts\AFAR\ui\defines.hpp"
+#include "scripts\AFAR\ui\dialogs.hpp"
+
+/* ---------------------------------- =ATM= --------------------------------- */
+#include "scripts\ATM_airdrop\dialog.hpp"
+
+/* ---------------------------------- Core ---------------------------------- */
+#include "RscTitles.hpp"
+#include "cfgBaseBuild.hpp"
+
+/* ------------------------------- Supression ------------------------------- */
+class CfgBrains {
+    class DefaultSoldierBrain {
+        class Components {
+            class AIBrainSuppressionComponent {
+                worstDecreaseTime = 25.0;   // in seconds for 0.0 skill
+                bestDecreaseTime = 4.0;     // in seconds for 1.0 skill
+                causeExplosionWeight = 1.5; // 
+            };
+            class AIBrainAimingErrorComponent {
+                worstDecreaseTime	= 3.5; // how long (in seconds) it should take 0.0 skilled soldier to stabilize the aim completely 
+                bestDecreaseTime = 0.6; // how long (in seconds) it should take 1.0 skilled soldier to stabilize the aim completely
+                turningInfluence = 1.2; // importance of turning in algorithm, multiplier
+            };
+        };
+    };
+};
